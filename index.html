@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanchard</title>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header__menu">
+            <div class="container header__first-menu-flex">
+                <div class="header__logo">
+                    <div class="header__title">Blanchard</div>
+                    <div class="header__subtitle">художественная галерея</div>
+                </div>
+                <menu class="main-menu">
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">О нас</a></div>
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">Каталог</a></div>
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">Галерея</a></div>
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">Издания</a></div>
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">События</a></div>
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">Контакты</a></div>
+                        <div class="main-menu__items"><a href="#" class="main-menu__hrefs">Проекты</a></div>
+                </menu>
+                <div class="login">
+                    <img src="img/img_desktop/Vector.svg" alt="entry" class="login__img">
+                    <a href="#" class="login__text">Вход</a>
+                </div>
+            </div>
+            <div class="header__second-menu">
+                <div class="container header__second-menu-flex">
+                <menu class="genrel-menu">
+                        <div class="genrel-menu__items"><a href="#" class="genrel-menu__hrefs">Реализм<img src="img/img_desktop/down.svg" alt="" class="general-menu__svg"></a></div>
+                        <div class="genrel-menu__items"><a href="#" class="genrel-menu__hrefs">Импрессионизм<img src="img/img_desktop/down.svg" alt="" class="general-menu__svg"></a></div>
+                        <div class="genrel-menu__items"><a href="#" class="genrel-menu__hrefs">Постимпрессионизм<img src="img/img_desktop/down.svg" alt="" class="general-menu__svg"></a></div>
+                        <div class="genrel-menu__items"><a href="#" class="genrel-menu__hrefs">Авангард<img src="img/img_desktop/down.svg" alt="" class="general-menu__svg"></a></div>
+                        <div class="genrel-menu__items"><a href="#" class="genrel-menu__hrefs">Футуризм<img src="img/img_desktop/down.svg" alt="" class="general-menu__svg"></a></div>
+                </menu>
+                    <div class="header__search-container">
+                        <img src="img/img_desktop/search.svg" alt="search" class="header__search-img">
+                        <input type="search" class="header__search-input" placeholder="Поиск по сайту">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </header>
+    <main class="main">
+            <div class="hero">
+                <div class="swiper-container" >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"  style="background-image: url(img/img_desktop/main-baner1.png);background-position-y: bottom;background-size: cover;"></div>
+                        <div class="swiper-slide"  style="background-image: url(img/img_desktop/main-baner2.png);background-position-y: bottom;background-size: cover;"></div>
+                        <div class="swiper-slide"  style="background-image: url(img/img_desktop/main-baner3.png);background-position-y: bottom;background-size: cover;"></div>
+                    </div>
+                    <div class="swiper-button-prev" aria-label="Кнопка вперед" ></div>
+                    <div class="swiper-button-next" aria-label="Кнопка назад" ></div>
+                    <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="container hero__title-container">
+                        <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
+                        <div class="hero__subtitle">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</div>
+                        <button class="hero__btn">Подписаться на рассылку</button>
+                    </div>
+                </div>
+    </main>
+    <footer>
+    </footer>
+
+
+    <script>var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+    </script>
+</body>
+</html>
