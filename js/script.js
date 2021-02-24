@@ -120,7 +120,9 @@ $( ".acardion" ).accordion({
   collapsible: true,
   animate: 300,
   active:0,
+  heightStyle: "content",
 });
+$ ('.acardion').accordion("refresh");
 
 // Свипер для вкладки проэкты
 new Swiper(".gallery__swiper-container", {
@@ -136,6 +138,7 @@ new Swiper(".gallery__swiper-container", {
   slidesPerView: 3,
   spaceBetween: 50,
   slidesPerColumn: 2,
+  slidesPerGroup:3,
   observer:true,
   observeParents:true,
   observeSlideChildren:true
@@ -144,24 +147,21 @@ new Swiper(".gallery__swiper-container", {
 
 
 new Swiper(".partners-projects__swiper-container", {
-  loop: true,
-  effect: 'fade',
-  fadeEffect: {
-  crossFade: true
-  },
+  loop:true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  slidesPerGroup:3,
   navigation: {
-  nextEl: '.partners-projects__prev',
-  prevEl: '.partners-projects__next',
+  nextEl: '.partners-projects__next',
+  prevEl: '.partners-projects__prev',
   },
 });
 // Свипер для вкладки Издания
 
 new Swiper(".publications-book", {
-  loop: true,
-  effect: 'fade',
-  fadeEffect: {
-  crossFade: true
-  },
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup:2,
   navigation: {
   nextEl: '.gallery-photo__btn-next',
   prevEl: '.gallery-photo__btn-prew',
