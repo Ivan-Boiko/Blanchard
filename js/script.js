@@ -1,44 +1,20 @@
 window.addEventListener('DOMContentLoaded', function(){
-    document.querySelector('.btn-realism').addEventListener('click', function() {
-      document.querySelector('.hidden-menu__realism').classList.toggle('hidden-menu--active');
-      document.querySelector('.hidden-menu__realism').classList.toggle('realism-menu');
-    });
-    document.querySelector('.btn-imperesizm').addEventListener('click', function() {
-      document.querySelector('.hidden-menu__imperesizm').classList.toggle('hidden-menu--active');
-      document.querySelector('.hidden-menu__imperesizm').classList.toggle('imperesizm-menu');
-      
-    });
-    document.querySelector('.btn-postimperesizm').addEventListener('click', function() {
-      document.querySelector('.hidden-menu__postimperesizm').classList.toggle('hidden-menu--active');
-      document.querySelector('.hidden-menu__postimperesizm').classList.toggle('postimperesizm-menu');
-      
-    });
-    document.querySelector('.btn-avangard').addEventListener('click', function() {
-      document.querySelector('.hidden-menu__avangard').classList.toggle('hidden-menu--active');
-      document.querySelector('.hidden-menu__avangard').classList.toggle('avangard-menu');
-      
-    });
-    document.querySelector('.btn-footorizm').addEventListener('click', function() {
-      document.querySelector('.hidden-menu__footorizm').classList.toggle('hidden-menu--active');
-      document.querySelector('.hidden-menu__footorizm').classList.toggle('footorizm-menu');
-     
-    });
-  
-
-    document.querySelectorAll('.genrel-menu__btn').forEach(function(tabsGenrelMenu){
-      tabsGenrelMenu.addEventListener('click', function(event){
-        const path = event.currentTarget.dataset.path
-        document.querySelector('.genrel-menu__svg')
-        document.querySelector(`[data-target="${path}"]`).classList.toggle('genrel-menu__svg_rotate');
+    document.querySelectorAll('.genrel-menu__btn').forEach(function(tabsMenu){
+      tabsMenu.addEventListener('click', function(ev){
+        const href = ev.currentTarget.dataset.href;
+        document.querySelector(`[data-targets="${href}"]`).classList.toggle('hidden-menu--active');
+        const rotate = ev.currentTarget.dataset.rotate;
+        document.querySelector(`[data-rotate="${href}"]`).classList.toggle('genrel-menu__svg_rotate');
       })
     });
-    
-     
+
+
+
     document.querySelector('#events-btn').addEventListener('click', function() {
       document.querySelector('#events_hidden-block1').classList.toggle('events_active');
       document.querySelector('#events_hidden-block2').classList.toggle('events_active');
     })
-    
+
     document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
       tabsLang.addEventListener('click', function(event){
         const path = event.currentTarget.dataset.path;
@@ -68,12 +44,12 @@ window.addEventListener('DOMContentLoaded', function(){
         const path = event.currentTarget.dataset.path;
         document.querySelectorAll('.katalog-painter__information').forEach(function(tabContent){
           tabContent.classList.remove('katalog-painter_active')
-          
+
         })
         document.querySelector(`[data-target="${path}"]`).classList.add('katalog-painter_active')
       })
     });
-    
+
 
     // VALIDATION
 
@@ -82,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     im.mask(selector);
 
-    
+
     new JustValidate('.callback-contacts',{
     colorWrong: '#ff3300',
     rules: {
@@ -107,11 +83,12 @@ window.addEventListener('DOMContentLoaded', function(){
       },
       tel: {
         required:"Введите Телефон",
-        function:"Введите больше цифр" 
-        }
-      },
-     
-});
+        function:"Введите больше цифр"
+      }
+    },
+
+  });
+
 
 
 // acardeon
@@ -141,13 +118,15 @@ new Swiper(".gallery__swiper-container", {
   slidesPerGroup:3,
   observer:true,
   observeParents:true,
-  observeSlideChildren:true
+  observeSlideChildren:true,
+  zoom: {
+    maxRatio: 2,
+  },
 });
 
 
 
 new Swiper(".partners-projects__swiper-container", {
-  loop:true,
   slidesPerView: 3,
   spaceBetween: 10,
   slidesPerGroup:3,
@@ -155,7 +134,9 @@ new Swiper(".partners-projects__swiper-container", {
   nextEl: '.partners-projects__next',
   prevEl: '.partners-projects__prev',
   },
+
 });
+
 // Свипер для вкладки Издания
 
 new Swiper(".publications-book", {
@@ -163,8 +144,8 @@ new Swiper(".publications-book", {
   spaceBetween: 50,
   slidesPerGroup:2,
   navigation: {
-  nextEl: '.gallery-photo__btn-next',
-  prevEl: '.gallery-photo__btn-prew',
+  nextEl: '.editions__btn-next',
+  prevEl: '.editions__btn-prew',
   },
   pagination:{
     el: '.editions__pagination',
@@ -172,9 +153,8 @@ new Swiper(".publications-book", {
   }
 });
 
-// Свипер для вкладки Галерея
 
- 
+
 // Свипер для вкладки hero
 
  new Swiper(".swiper-hero", {
