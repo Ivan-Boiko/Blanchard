@@ -24,20 +24,17 @@ window.addEventListener('DOMContentLoaded', function(){
         document.querySelector(`[data-target="${path}"]`).classList.add('katalog_active')
       })
     });
-
-
-
     document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
-      tabsLang.addEventListener('click', function(ev){
-        const target = ev.currentTarget.getAttribute('href')
+      tabsLang.addEventListener('click', function(event){
+        const path = event.currentTarget.dataset.path;
         document.querySelectorAll('.tab__content').forEach(function(tabContent){
           tabContent.classList.remove('acardion_active')
         })
-        document.querySelector(target).classList.add('acardion_active')
-
-        $('.acardion').accordion("refresh");
+        document.querySelector(`[data-country="${path}"]`).classList.add('acardion_active')
       })
+
     });
+
 
     document.querySelectorAll('.acordion__persons').forEach(function(tabsAcardion){
       tabsAcardion.addEventListener('click', function(event){
@@ -102,7 +99,7 @@ $( ".acardion" ).accordion({
 $ ('.acardion').accordion("refresh");
 
 // Свипер для вкладки проэкты
-new Swiper(".gallery__swiper-container", {
+const swiper = new Swiper(".gallery__swiper-container", {
   //Optional parameters
   navigation: {
   nextEl: '.gallery__btn-next',
@@ -112,18 +109,16 @@ new Swiper(".gallery__swiper-container", {
     el: '.gallery__pagination',
     type: 'fraction',
   },
-  slidesPerView: 3,
-  spaceBetween: 50,
   slidesPerColumn: 2,
   slidesPerGroup:3,
+  slidesPerView: 3,
+  spaceBetween: 50,
   observer:true,
   observeParents:true,
   observeSlideChildren:true,
-  zoom: {
-    maxRatio: 2,
-  },
-});
 
+});
+swiper.updateSize();
 
 
 new Swiper(".partners-projects__swiper-container", {
@@ -134,6 +129,9 @@ new Swiper(".partners-projects__swiper-container", {
   nextEl: '.partners-projects__next',
   prevEl: '.partners-projects__prev',
   },
+  observer:true,
+  observeParents:true,
+  observeSlideChildren:true,
 
 });
 
@@ -150,14 +148,28 @@ new Swiper(".publications-book", {
   pagination:{
     el: '.editions__pagination',
     type: 'fraction'
-  }
+  },
+  observer:true,
+  observeParents:true,
+  observeSlideChildren:true,
 });
 
 
 
 // Свипер для вкладки hero
 
- new Swiper(".swiper-hero", {
+ new Swiper(".swiper-hero ", {
+  //Optional parameters
+  loop: true,
+  autoplay: {
+  delay: 6000,
+  },
+  effect: 'fade',
+  fadeEffect: {
+  crossFade: true
+  },
+});
+new Swiper(".swiper-hero-table ", {
   //Optional parameters
   loop: true,
   autoplay: {
