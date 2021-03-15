@@ -30,7 +30,10 @@ window.addEventListener('DOMContentLoaded', function(){
         document.querySelectorAll('.tab__content').forEach(function(tabContent){
           tabContent.classList.remove('acardion_active')
         })
-        document.querySelector(`[data-country="${path}"]`).classList.add('acardion_active')
+        document.querySelectorAll('.tab__content').forEach(function(tabContent){
+          tabContent.classList.remove('acardion_active')
+        })
+        document.querySelector(`[data-country="${path}"]`).classList.add('tab__content-acardion_active')
       })
 
     });
@@ -100,7 +103,6 @@ $ ('.acardion').accordion("refresh");
 
 // Свипер для вкладки проэкты
 const swiper = new Swiper(".gallery__swiper-container", {
-  //Optional parameters
   navigation: {
   nextEl: '.gallery__btn-next',
   prevEl: '.gallery__btn-prev',
@@ -109,22 +111,74 @@ const swiper = new Swiper(".gallery__swiper-container", {
     el: '.gallery__pagination',
     type: 'fraction',
   },
-  slidesPerColumn: 2,
-  slidesPerGroup:3,
-  slidesPerView: 3,
-  spaceBetween: 50,
+  breakpoints: {
+    320:{
+
+    },
+    480:{
+
+    },
+    768:{
+
+    },
+    1024:{
+      slidesPerColumn:2,
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1300:{
+      slidesPerColumn:2,
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1650:{
+      slidesPerColumn:2,
+      slidesPerGroup:7,
+      slidesPerView: 3,
+      spaceBetween: 50,
+    }
+  },
+
   observer:true,
   observeParents:true,
   observeSlideChildren:true,
-
 });
-swiper.updateSize();
+
 
 
 new Swiper(".partners-projects__swiper-container", {
   slidesPerView: 3,
   spaceBetween: 10,
   slidesPerGroup:3,
+  breakpoints: {
+    320:{
+
+    },
+    480:{
+
+    },
+    768:{
+
+    },
+    1024:{
+      slidesPerView: 2,
+      slidesPerGroup:2,
+      spaceBetween: 30,
+    },
+    1300:{
+      slidesPerView: 2,
+      spaceBetween: 10,
+      slidesPerGroup:2,
+
+    },
+    1650:{
+      slidesPerView: 3,
+  spaceBetween: 10,
+  slidesPerGroup:3,
+    }
+  },
   navigation: {
   nextEl: '.partners-projects__next',
   prevEl: '.partners-projects__prev',
@@ -149,6 +203,35 @@ new Swiper(".publications-book", {
     el: '.editions__pagination',
     type: 'fraction'
   },
+  breakpoints: {
+    320:{
+
+    },
+    480:{
+
+    },
+    768:{
+
+    },
+    1024:{
+
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    1300:{
+
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1650:{
+
+      slidesPerGroup:3,
+      slidesPerView: 3,
+      spaceBetween: 50,
+    }
+  },
   observer:true,
   observeParents:true,
   observeSlideChildren:true,
@@ -169,17 +252,7 @@ new Swiper(".publications-book", {
   crossFade: true
   },
 });
-new Swiper(".swiper-hero-table ", {
-  //Optional parameters
-  loop: true,
-  autoplay: {
-  delay: 6000,
-  },
-  effect: 'fade',
-  fadeEffect: {
-  crossFade: true
-  },
-});
+
 
 // инпут для вкладки галерея
 
