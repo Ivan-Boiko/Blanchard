@@ -1,19 +1,67 @@
 window.addEventListener('DOMContentLoaded', function(){
+  let showMenu = () => {
     document.querySelectorAll('.genrel-menu__btn').forEach(function(tabsMenu){
       tabsMenu.addEventListener('click', function(ev){
         const href = ev.currentTarget.dataset.href;
-        document.querySelector(`[data-targets="${href}"]`).classList.toggle('hidden-menu--active');
-        const rotate = ev.currentTarget.dataset.rotate;
-        document.querySelector(`[data-rotate="${href}"]`).classList.toggle('genrel-menu__svg_rotate');
-      })
+          document.querySelectorAll('.hidden-menu__list').forEach(function(tabContent){
+            tabContent.classList.remove('hidden-menu--active')
+          })
+        document.querySelector(`[data-targets="${href}"]`).classList.add('hidden-menu--active');
+        console.log(href)
     });
+  })
+  };
 
+  showMenu();
 
-
-    document.querySelector('#events-btn').addEventListener('click', function() {
-      document.querySelector('#events_hidden-block1').classList.toggle('events_active');
-      document.querySelector('#events_hidden-block2').classList.toggle('events_active');
+  let showBurger = () =>{
+    document.querySelector('#burger-btn').addEventListener('click', function() {
+      document.querySelector('.burger-menu').classList.toggle('burger_active');
     })
+    const tool = document.getElementById('burger-btn');
+    tool.addEventListener('click', () => {
+        tool.classList.toggle('btn_active');
+      })
+  }
+
+  showBurger ();
+
+
+  let searchActive = () =>{
+    document.querySelector('.header__search-btn').addEventListener('click', function() {
+      document.querySelector('.header__input-search').classList.toggle('search_active');
+      document.querySelector('.header__burger-form').classList.toggle('form-bg');
+    })
+  };
+
+  searchActive ();
+
+  let tableBurgerActive = ( ) =>{
+    document.querySelector('.header__search-btn-table').addEventListener('click', function() {
+      document.querySelector('.header__burger-btn').classList.add('display_none');
+      document.querySelector('.header__logo-table').classList.add('display_none');
+      document.querySelector('.header__input-search-table').classList.add('search_active');
+      document.querySelector('.header_burger-form-table').style.width = '1023px';
+      document.querySelector('.header__close-btn').classList.add('btn_close-active');
+    })
+  };
+
+  tableBurgerActive ();
+
+
+  let tableBurgerClosed = () => {
+    document.querySelector('.header__close-btn').addEventListener('click', function() {
+      document.querySelector('.header__burger-btn').classList.remove('display_none');
+      document.querySelector('.header__logo-table').classList.remove('display_none');
+      document.querySelector('.header__input-search-table').classList.remove('search_active');
+      document.querySelector('.header__close-btn').classList.remove('btn_close-active');
+      document.querySelector('.header_burger-form-table').style.width = '';
+    })
+  }
+
+  tableBurgerClosed ();
+
+  let subtitleChoices = () =>{
 
     document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
       tabsLang.addEventListener('click', function(event){
@@ -24,31 +72,75 @@ window.addEventListener('DOMContentLoaded', function(){
         document.querySelector(`[data-target="${path}"]`).classList.add('katalog_active')
       })
     });
-    document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
-      tabsLang.addEventListener('click', function(event){
-        const path = event.currentTarget.dataset.path;
-        document.querySelectorAll('.tab__content').forEach(function(tabContent){
-          tabContent.classList.remove('acardion_active')
-        })
-        document.querySelectorAll('.tab__content').forEach(function(tabContent){
-          tabContent.classList.remove('acardion_active')
-        })
-        document.querySelector(`[data-country="${path}"]`).classList.add('tab__content-acardion_active')
+  }
+  subtitleChoices();
+
+
+let acardionChoices = () => {
+
+  document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
+    tabsLang.addEventListener('click', function(event){
+      const path = event.currentTarget.dataset.path;
+      document.querySelectorAll('.tab__content').forEach(function(tabContent){
+        tabContent.classList.remove('acardion_active')
       })
+      document.querySelector(`[data-country="${path}"]`).classList.add('acardion_active')
+    })
+  });
+}
+acardionChoices ();
 
-    });
+let painterChoices = () => {
+
+  document.querySelectorAll('.acordion__persons').forEach(function(tabsAcardion){
+  tabsAcardion.addEventListener('click', function(event){
+  const path = event.currentTarget.dataset.path;
+  document.querySelectorAll('.katalog-painter__information').forEach(function(tabContent){
+    tabContent.classList.remove('katalog-painter_active')
+
+  })
+  document.querySelector(`[data-target="${path}"]`).classList.add('katalog-painter_active')
+  })
+  });
+}
+painterChoices();
 
 
-    document.querySelectorAll('.acordion__persons').forEach(function(tabsAcardion){
-      tabsAcardion.addEventListener('click', function(event){
-        const path = event.currentTarget.dataset.path;
-        document.querySelectorAll('.katalog-painter__information').forEach(function(tabContent){
-          tabContent.classList.remove('katalog-painter_active')
-
+let countryBackgroundСhanges = () => {
+  document.querySelectorAll('.katalog__btn').forEach(function(tabsAcardion){
+    tabsAcardion.addEventListener('click', function(event){
+    const path = event.currentTarget.dataset.path;
+      document.querySelectorAll('.katalog__btn').forEach(function(tabContent){
+        tabContent.classList.remove('katalog__btn_bg')
         })
-        document.querySelector(`[data-target="${path}"]`).classList.add('katalog-painter_active')
-      })
+          document.querySelector(`[data-path="${path}"]`).classList.add('katalog__btn_bg')
+          })
     });
+}
+countryBackgroundСhanges ();
+
+let painterColorСhanges = () => {
+  document.querySelectorAll('.acordion__persons').forEach(function(tabsAcardion){
+    tabsAcardion.addEventListener('click', function(event){
+    const path = event.currentTarget.dataset.path;
+      document.querySelectorAll('.acordion__persons').forEach(function(tabContent){
+        tabContent.classList.remove('acardinon__persons-color')
+        })
+          document.querySelector(`[data-path="${path}"]`).classList.add('acardinon__persons-color')
+          })
+    });
+}
+painterColorСhanges ();
+
+
+let showEvents = () => {
+        document.querySelector('.events__btn').addEventListener('click', function(){
+        document.querySelector(".events__hide-article-list").classList.add('events_active')
+        document.querySelector(".events__btn").style.display = "none";
+      })
+    };
+
+  showEvents();
 
 
     // VALIDATION
@@ -91,17 +183,18 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 
-// acardeon
+// acardion
 
 $( ".acardion" ).accordion({
   collapsible: true,
-  animate: 300,
+  animate: 500,
   active:0,
   heightStyle: "content",
 });
 $ ('.acardion').accordion("refresh");
 
 // Свипер для вкладки проэкты
+
 const swiper = new Swiper(".gallery__swiper-container", {
   navigation: {
   nextEl: '.gallery__btn-next',
@@ -116,10 +209,15 @@ const swiper = new Swiper(".gallery__swiper-container", {
 
     },
     480:{
-
+      slidesPerGroup:1,
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
     768:{
-
+      slidesPerColumn:2,
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     1024:{
       slidesPerColumn:2,
@@ -140,7 +238,7 @@ const swiper = new Swiper(".gallery__swiper-container", {
       spaceBetween: 50,
     }
   },
-
+  watchOverflow:true,
   observer:true,
   observeParents:true,
   observeSlideChildren:true,
@@ -160,7 +258,9 @@ new Swiper(".partners-projects__swiper-container", {
 
     },
     768:{
-
+      slidesPerView: 2,
+      slidesPerGroup:2,
+      spaceBetween: 7,
     },
     1024:{
       slidesPerView: 2,
@@ -211,10 +311,11 @@ new Swiper(".publications-book", {
 
     },
     768:{
-
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      spaceBetween: 0,
     },
     1024:{
-
       slidesPerGroup:2,
       slidesPerView: 2,
       spaceBetween: 25,

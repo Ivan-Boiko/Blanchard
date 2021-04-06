@@ -21,6 +21,18 @@
   </head>
   <body>
     <header class="header">
+      <div class="burger-menu">
+        <ul class="burger-menu__list">
+          <li class="burger-menu__items"><button  class="burger-menu__href">О нас</button></li>
+          <li class="burger-menu__items"><button  class="burger-menu__href">Галерея</button></li>
+          <li class="burger-menu__items"><button  class="burger-menu__href">Каталог</button></li>
+          <li class="burger-menu__items"><button  class="burger-menu__href">События</button></li>
+          <li class="burger-menu__items"><button  class="burger-menu__href">Издания</button></li>
+          <li class="burger-menu__items"><button  class="burger-menu__href">Проекты</button></li>
+          <li class="burger-menu__items"><button  class="burger-menu__href">Контакты</button></li>
+          <button class="burger-menu__btn"><img src="img/img_desktop/Vector.svg" alt="" class="burger-menu__arrow">Войти</button>
+        </ul>
+      </div>
       <div class="header__menu">
         <div class="header__first-menu">
           <div class="container header__first-menu-flex">
@@ -70,9 +82,20 @@
                   fill="currentColor"/></svg>Войти</a>
           </div>
           <div class="container header__first-menu-flex-table">
-            <img src="/img/img_table/Burger.svg" alt="burger" class="header__burger-img">
-            <img src="/img/img_table/logo.svg" alt="logo-table" class="header__logo-table">
-            <img src="/img/img_table/Search.svg" alt="search-table" class="header__search-table">
+            <button id ="burger-btn" class="header__burger-btn"><img src="img/img_table/Burger.svg" alt="burger" class="header__burger-img"></button>
+            <img src="img/img_table/logo.svg" alt="logo-table" class="header__logo-table">
+            <form action="#" class="header__burger-form">
+              <button class = "header__search-btn"><img src="img/img_table/Search.svg" alt="search-table" class="header__search-table"></button>
+              <input type="search" class="header__input-search">
+            </form>
+            <form action="#" class="header_burger-form-table">
+              <button class = "header__search-btn-table"><img src="img/img_table/Search.svg" alt="search-table" class="header__search-img"></button>
+              <input type="search" class="header__input-search-table">
+              <button class = "header__close-btn "><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.63672" width="37.2838" height="3.72838" transform="rotate(45 2.63672 0)" class="header__close-btn-svg" fill="white"/>
+                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" class="header__close-btn-svg" fill="white"/>
+                </svg></button>
+            </form>
           </div>
         </div>
         <div class="header__second-menu">
@@ -85,7 +108,7 @@
                       <path d="M11 5L6 10L0.999997 5" stroke="currentColor" />
                       </svg>
                   </button>
-                  <div  class="hidden-menu__list" data-targets="one">
+                  <div  class="hidden-menu__list list-1" data-targets="one">
                     <ul class="hidden-menu__container" data-simplebar>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg1.png); background-size: cover">Тинторетто</li>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg2.png); background-size: cover">Фридрих</li>
@@ -112,7 +135,7 @@
                     <svg  class ="genrel-menu__svg " width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg" data-rotate ="two">
                       <path  d="M11 5L6 10L0.999997 5" stroke="currentColor" /></svg>
                     </button>
-                    <div  class="hidden-menu__list " data-targets="two">
+                    <div  class="hidden-menu__list list-2" data-targets="two">
                       <ul class="hidden-menu__container" data-simplebar>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg5.png); background-size:cover">Моне</li>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg6.png); background-size:cover">Сислей</li>
@@ -139,7 +162,7 @@
                     <svg  class ="genrel-menu__svg " width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg" data-rotate ="three">
                       <path d="M11 5L6 10L0.999997 5" stroke="currentColor" /></svg>
                   </button>
-                  <div  class="hidden-menu__list  " data-targets="three">
+                  <div  class="hidden-menu__list  list-3" data-targets="three">
                     <ul class="hidden-menu__container" data-simplebar>
                     <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg9.png); background-size:cover">Ван Гог</li>
                     <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg10.png); background-size:cover">Сезанн</li>
@@ -166,7 +189,7 @@
                     <svg  class ="genrel-menu__svg " width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg" data-rotate ="four">
                       <path d="M11 5L6 10L0.999997 5" stroke="currentColor" /></svg>
                   </button>
-                  <div  class="hidden-menu__list  " data-targets="four">
+                  <div  class="hidden-menu__list  list-4" data-targets="four">
                     <ul class="hidden-menu__container" data-simplebar>
                     <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg13.png); background-size:cover">Кандинский</li>
                     <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg14.png); background-size:cover">Маринетти</li>
@@ -193,7 +216,7 @@
                     <svg  class ="genrel-menu__svg " width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg" data-rotate ="five">
                       <path d="M11 5L6 10L0.999997 5" stroke="currentColor" /></svg>
                   </button>
-                   <div  class="hidden-menu__list " data-targets="five">
+                   <div  class="hidden-menu__list list-5" data-targets="five">
                     <ul class="hidden-menu__container" data-simplebar>
                     <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg17.png); background-size:cover" >Карра</li>
                     <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg18.png); background-size:cover" >Прателла</li>
@@ -318,6 +341,7 @@
                 <div class="gallery__swiper-container swiper-container ">
                   <div class="swiper-wrapper gallery__swiper-wrapper">
                     <div class="gallery__swiper-slide swiper-slide ">
+
                       <img class ="gallery__img" src="img/img_desktop/galery-photo1.png" alt="photo1">
                     </div>
                     <div class="gallery__swiper-slide swiper-slide ">
@@ -439,8 +463,14 @@
                     <div class="gallery__swiper-slide swiper-slide ">
                       <img class ="gallery__img" src="img/img_desktop/galery-photo30.png" alt="photo30">
                     </div>
+
                 </div>
                 </div>
+                <p class="gallery-menu__subtitle-table">
+                  Вам предоставляется 10 бесплатных скачиваний. Для увеличения
+                  количества скачиваний <a href ="#" class="gallery-menu--span">авторизуйтесь</a>, либо воспользуйтесь
+                  лицензией.
+                </p>
           </div>
         </div>
       </div>
@@ -449,11 +479,13 @@
         <div class="container">
           <div class="katalog__language">
           <h3 class="katalog__title">Каталог</h3>
+          <div class="katalog__btn-container">
             <button  class="katalog__btn" data-path="franch"><img src="img/img_desktop/franch.svg" alt="france" class="katalog__country" /></button>
             <button  class="katalog__btn" data-path="germany"><img src="img/img_desktop/ger.svg"   alt="germany" class="katalog__country" /></button>
-            <button  class="katalog__btn" data-path="italian"><img src="img/img_desktop/ital.svg"  alt="Italian" class="katalog__country" /></button>
+            <button  class="katalog__btn katalog__btn_bg" data-path="italian"><img src="img/img_desktop/ital.svg"  alt="Italian" class="katalog__country" /></button>
             <button  class="katalog__btn" data-path="russia"><img src="img/img_desktop/Rus.svg"   alt="Russian" class="katalog__country" /></button>
             <button  class="katalog__btn" data-path="belgium"><img src="img/img_desktop/Belg.svg"  alt="Belgiun" class="katalog__country" /></button>
+              </div>
           </div>
           <div class="katalog__subtitle " data-target="franch">
             Франция подарила миру много ярких оригинальных художников. И это не только импрессионисты, которые поколебали многовековые традиции. Страна соседствует с колыбелью живописи - прекрасной Италией. Поэтому неудивительно, что Ренессанс оказал большое влияние на творческих людей. Но национальная оригинальная школа не сформировалась; Франция не может похвастаться мастерами, превосходящими по таланту знаменитых Леонардо да Винчи или Караваджо. Уроженцы этой солнечной страны внесли свой вклад в мировое искусство в другое время.
@@ -1446,7 +1478,7 @@
             </div>
 
 
-            <div class="tab__content   tab__content-franch" id ="franch" data-country = "franch">
+            <div class="tab__content" id ="franch" data-country = "franch">
               <div id="accordion_franch" class="acardion" aria-label="Вопросы">
                 <h3 tabindex="0" class="acardion__title">С 1400 по 1499 гг.
                   <svg class="acardion__svg focus-svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1536,7 +1568,7 @@
               </div>
             </div>
 
-            <div class="tab__content   tab__content-germany" id ="germany" data-country = "germany">
+            <div class="tab__content" id ="germany" data-country = "germany">
               <div id="accordion_germany" class="acardion" aria-label="Вопросы">
                 <h3 tabindex="0" class="acardion__title">С 1400 по 1499 гг.
                   <svg class="acardion__svg focus-svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1626,7 +1658,7 @@
               </div>
             </div>
 
-            <div class="tab__content   tab__content-acardion_active  tab__content-italian" id="italian" data-country = "italian">
+            <div class="tab__content acardion_active" id="italian" data-country = "italian">
               <div id="accordion" class="acardion" aria-label="Вопросы">
                 <h3 tabindex="0" class="acardion__title">С 1400 по 1499 гг.
                   <svg class="acardion__svg focus-svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1635,72 +1667,71 @@
                     </svg>
                 </h3>
                   <ul class="acardion__list ">
+                      <li class="acardion__items">
+                        <button class="acordion__persons" data-path="italian-painter_1">Бенедетто ди Биндо</button>
+                          <button class="acordion__persons" data-path="italian-painter_2">Бергоньоне, Амброджо</button>
+                            <button class="acordion__persons" data-path="italian-painter_3">Биссоло, Франческо</button>
+                              <button class="acordion__persons" data-path="italian-painter_4">Больтраффио, Джованни</button>
+                          <button class="acordion__persons" data-path="italian-painter_5">Бонсиньори, Франческо</button>
+                            <button class="acordion__persons" data-path="italian-painter_6">Боттичини, Рафаэлло</button>
+                              <button class="acordion__persons" data-path="italian-painter_7">Брамантино</button>
+                                <button class="acordion__persons" data-path="italian-painter_8">Бреа, Людовико</button>
+                                  <button class="acordion__persons" data-path="italian-painter_9">Бьяджо д'Антонио Туччи</button>
+
+
+                                    <button class="acordion__persons" data-path="italian-painter_10">Веккьетта</button>
+                                      <button class="acordion__persons" data-path="italian-painter_11">Андреа Верроккьо</button>
+                                        <button class="acordion__persons acardinon__persons-color" data-path="italian-painter_12">Доменико Гирландайо</button>
+                                          <button class="acordion__persons" data-path="italian-painter_13">Беноццо Гоццоли</button>
+                                            <button class="acordion__persons" data-path="italian-painter_14">Граначчи, Франческо</button>
+                                              <button class="acordion__persons" data-path="italian-painter_15">Грегорио ди Чекко</button>
+                                                <button class="acordion__persons" data-path="italian-painter_16">Джованни да Удине</button>
+                                                  <button class="acordion__persons" data-path="italian-painter_17">Джованни ди Паоло</button>
+                                                    <button class="acordion__persons" data-path="italian-painter_18">Джорджоне</button>
+
+
+                                                      <button class="acordion__persons" data-path="italian-painter_19">Парентино, Бернардо</button>
+                                                        <button class="acordion__persons" data-path="italian-painter_20">Пезеллино</button>
+                                                          <button class="acordion__persons" data-path="italian-painter_21">Пьетро Перуджино</button>
+                                                            <button class="acordion__persons" data-path="italian-painter_22">Перуцци, Бальдассаре</button>
+                                                              <button class="acordion__persons" data-path="italian-painter_23">Пизанелло</button>
+                                                                    <button class="acordion__persons" data-path="italian-painter_24">Пинтуриккьо</button></li>
+                  </ul>
+                <h3 tabindex="0" class="acardion__title">C 1500 по 1599 гг.
+                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                    </svg>
+                </h3>
+                <ul class="acardion__list"  >
                     <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_1">Бенедетто ди Биндо</button>
-                    <button class="acordion__persons" data-path="italian-painter_2">Бергоньоне, Амброджо</button>
-                    <button class="acordion__persons" data-path="italian-painter_3">Биссоло, Франческо</button>
-                    <button class="acordion__persons" data-path="italian-painter_4">Больтраффио, Джованни</button>
-                    <button class="acordion__persons" data-path="italian-painter_5">Бонсиньори, Франческо</button>
-                    <button class="acordion__persons" data-path="italian-painter_6">Боттичини, Рафаэлло</button>
-                    <button class="acordion__persons" data-path="italian-painter_7">Брамантино</button>
-                    <button class="acordion__persons" data-path="italian-painter_8">Бреа, Людовико</button>
-                    <button class="acordion__persons" data-path="italian-painter_9">Бьяджо д'Антонио Туччи</button>
-                   </li>
+                      <button class="acordion__persons" data-path="italian-painter_25">Аббате, Никколо дель</button>
+                    <button class="acordion__persons" data-path="italian-painter_26">Алесса́ндро Алло́ри</button>
+                  </li>
+                </ul>
+                <h3 tabindex="0" class="acardion__title">C 1600 по 1699 гг.
+                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                    </svg>
+                </h3>
+                <ul class="acardion__list" >
                     <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_10">Веккьетта</button>
-                    <button class="acordion__persons" data-path="italian-painter_11">Андреа Верроккьо</button>
-                    <button class="acordion__persons" data-path="italian-painter_12">Доменико Гирландайо</button>
-                    <button class="acordion__persons" data-path="italian-painter_13">Беноццо Гоццоли</button>
-                    <button class="acordion__persons" data-path="italian-painter_14">Граначчи, Франческо</button>
-                    <button class="acordion__persons" data-path="italian-painter_15">Грегорио ди Чекко</button>
-                    <button class="acordion__persons" data-path="italian-painter_16">Джованни да Удине</button>
-                    <button class="acordion__persons" data-path="italian-painter_17">Джованни ди Паоло</button>
-                    <button class="acordion__persons" data-path="italian-painter_18">Джорджоне</button>
+                    <button class="acordion__persons" data-path="italian-painter_27">Аллори, Кристофано</button>
+                    <button class="acordion__persons" data-path="italian-painter_28">Ангвиссола, Софонисба</button>
+                  </li>
+
+                </ul>
+                <h3 tabindex="0" class="acardion__title">C 1700 по 1799 гг.
+                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                    </svg>
+                </h3>
+                <ul class="acardion__list" >
+                    <li class="acardion__items"><button class="acordion__persons" data-path="italian-painter_29">Амигони, Якопо</button>
+                    <button class="acordion__persons" data-path="italian-painter_30">Аббиати, Филиппо</button>
                     </li>
-                    <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_19">Парентино, Бернардо</button>
-                    <button class="acordion__persons" data-path="italian-painter_20">Пезеллино</button>
-                    <button class="acordion__persons" data-path="italian-painter_21">Пьетро Перуджино</button>
-                    <button class="acordion__persons" data-path="italian-painter_22">Перуцци, Бальдассаре</button>
-                    <button class="acordion__persons" data-path="italian-painter_23">Пизанелло</button>
-                    <button class="acordion__persons" data-path="italian-painter_24">Пинтуриккьо</button>
-                  </li>
-                  </ul>
-                <h3 tabindex="0" class="acardion__title">C 1500 по 1599 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list"  >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_25">Аббате, Никколо дель</button>
-                    <button class="acordion__persons" data-path="italian-painter_26">Алесса́ндро Алло́ри</button>
-                   </li>
-                </ul>
-                <h3 tabindex="0" class="acardion__title">C 1600 по 1699 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list" >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_27">Аллори, Кристофано</button>
-                    <button class="acordion__persons" data-path="italian-painter_28">Ангвиссола, Софонисба</button>
-                   </li>
-                </ul>
-                <h3 tabindex="0" class="acardion__title">C 1700 по 1799 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list" >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_29">Амигони, Якопо</button>
-                    <button class="acordion__persons" data-path="italian-painter_30">Аббиати, Филиппо</button>
-                   </li>
                 </ul>
                 <h3 tabindex="0" class="acardion__title" >C 1800 по 1899 гг.
                   <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1709,10 +1740,9 @@
                     </svg>
                 </h3>
                   <ul class="acardion__list" >
-                    <li class="acardion__items">
-                      <button class="acordion__persons" data-path="italian-painter_31">Аббати, Джузеппе</button>
-                      <button class="acordion__persons" data-path="italian-painter_32">Аванци, Витторио</button>
-                     </li>
+                      <li class="acardion__items"><button class="acordion__persons" data-path="italian-painter_31">Аббати, Джузеппе</button>
+                        <button class="acordion__persons" data-path="italian-painter_32">Аванци, Витторио</button>
+                      </li>
                   </ul>
                 <h3 tabindex="0" class="acardion__title" >C 1900 по 1999 гг.
                   <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1721,12 +1751,10 @@
                     </svg>
                 </h3>
                 <ul class="acardion__list">
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_33">Адами, Валерио</button>
-                    <button class="acordion__persons" data-path="italian-painter_34">Амизани, Джузеппе</button>
-                   </li>
+                    <li class="acardion__items"><button class="acordion__persons" data-path="italian-painter_33">Адами, Валерио</button>
+                  <button class="acordion__persons" data-path="italian-painter_34">Амизани, Джузеппе</button>
+                </li>
                 </ul>
-
                 <h3 tabindex="0" class="acardion__title">C 2000 г.
                   <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
@@ -1734,129 +1762,14 @@
                     </svg>
                 </h3>
                 <ul class="acardion__list" >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_35">Катания Чезаре</button>
-                    <button class="acordion__persons" data-path="italian-painter_36">Каттелан, Маурицио</button>
-                   </li>
+                    <li class="acardion__items"><button class="acordion__persons" data-path="italian-painter_35">Катания Чезаре</button>
+                  <button class="acordion__persons" data-path="italian-painter_36">Каттелан, Маурицио</button>
+                </li>
                 </ul>
               </div>
             </div>
 
-             <div class="tab__content-table-italian" id="italian-table" data-country = "italian">
-              <div id="accordion" class="acardion" aria-label="Вопросы">
-                <h3 tabindex="0" class="acardion__title">С 1400 по 1499 гг.
-                  <svg class="acardion__svg focus-svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                  <ul class="acardion__list ">
-                    <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_1">Бенедетто ди Биндо</button>
-                    <button class="acordion__persons" data-path="italian-painter_2">Бергоньоне, Амброджо</button>
-                    <button class="acordion__persons" data-path="italian-painter_3">Биссоло, Франческо</button>
-                    <button class="acordion__persons" data-path="italian-painter_4">Больтраффио, Джованни</button>
-                    <button class="acordion__persons" data-path="italian-painter_5">Бонсиньори, Франческо</button>
-                    <button class="acordion__persons" data-path="italian-painter_6">Боттичини, Рафаэлло</button>
-                    <button class="acordion__persons" data-path="italian-painter_7">Брамантино</button>
-                    <button class="acordion__persons" data-path="italian-painter_8">Бреа, Людовико</button>
-                    <button class="acordion__persons" data-path="italian-painter_9">Бьяджо д'Антонио Туччи</button>
-                    <button class="acordion__persons" data-path="italian-painter_10">Веккьетта</button>
-                    <button class="acordion__persons" data-path="italian-painter_11">Андреа Верроккьо</button>
-                    <button class="acordion__persons" data-path="italian-painter_12">Доменико Гирландайо</button>
-                   </li>
-                    <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_13">Беноццо Гоццоли</button>
-                    <button class="acordion__persons" data-path="italian-painter_14">Граначчи, Франческо</button>
-                    <button class="acordion__persons" data-path="italian-painter_15">Грегорио ди Чекко</button>
-                    <button class="acordion__persons" data-path="italian-painter_16">Джованни да Удине</button>
-                    <button class="acordion__persons" data-path="italian-painter_17">Джованни ди Паоло</button>
-                    <button class="acordion__persons" data-path="italian-painter_18">Джорджоне</button>
-                    <button class="acordion__persons" data-path="italian-painter_19">Парентино, Бернардо</button>
-                    <button class="acordion__persons" data-path="italian-painter_20">Пезеллино</button>
-                    <button class="acordion__persons" data-path="italian-painter_21">Пьетро Перуджино</button>
-                    <button class="acordion__persons" data-path="italian-painter_22">Перуцци, Бальдассаре</button>
-                    <button class="acordion__persons" data-path="italian-painter_23">Пизанелло</button>
-                    <button class="acordion__persons" data-path="italian-painter_24">Пинтуриккьо</button>
-                  </li>
-                  </ul>
-                <h3 tabindex="0" class="acardion__title">C 1500 по 1599 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list"  >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_25">Аббате, Никколо дель</button>
-                    <button class="acordion__persons" data-path="italian-painter_26">Алесса́ндро Алло́ри</button>
-                   </li>
-                </ul>
-                <h3 tabindex="0" class="acardion__title">C 1600 по 1699 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list" >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_27">Аллори, Кристофано</button>
-                    <button class="acordion__persons" data-path="italian-painter_28">Ангвиссола, Софонисба</button>
-                   </li>
-                </ul>
-                <h3 tabindex="0" class="acardion__title">C 1700 по 1799 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list" >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_29">Амигони, Якопо</button>
-                    <button class="acordion__persons" data-path="italian-painter_30">Аббиати, Филиппо</button>
-                   </li>
-                </ul>
-                <h3 tabindex="0" class="acardion__title" >C 1800 по 1899 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                  <ul class="acardion__list" >
-                    <li class="acardion__items">
-                      <button class="acordion__persons" data-path="italian-painter_31">Аббати, Джузеппе</button>
-                      <button class="acordion__persons" data-path="italian-painter_32">Аванци, Витторио</button>
-                     </li>
-                  </ul>
-                <h3 tabindex="0" class="acardion__title" >C 1900 по 1999 гг.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list">
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_33">Адами, Валерио</button>
-                    <button class="acordion__persons" data-path="italian-painter_34">Амизани, Джузеппе</button>
-                   </li>
-                </ul>
-
-                <h3 tabindex="0" class="acardion__title">C 2000 г.
-                  <svg class="acardion__svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="genrel-bg" d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
-                    <path  d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
-                    </svg>
-                </h3>
-                <ul class="acardion__list" >
-                  <li class="acardion__items">
-                    <button class="acordion__persons" data-path="italian-painter_35">Катания Чезаре</button>
-                    <button class="acordion__persons" data-path="italian-painter_36">Каттелан, Маурицио</button>
-                   </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tab__content  tab__content-russia" id ="russia" data-country = "russia">
+            <div class="tab__content " id ="russia" data-country = "russia">
               <div id="accordion_russia" class="acardion" aria-label="Вопросы">
                 <h3 tabindex="0" class="acardion__title">С 1400 по 1499 гг.
                   <svg class="acardion__svg focus-svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1946,7 +1859,7 @@
               </div>
             </div>
 
-            <div class="tab__content  tab__content-belgium" id ="belgium" data-country = "belgium">
+            <div class="tab__content " id ="belgium" data-country = "belgium">
               <div id="accordion_belgium" class="acardion" aria-label="Вопросы">
                 <h3 tabindex="0" class="acardion__title">С 1400 по 1499 гг.
                   <svg class="acardion__svg focus-svg" width="50" height="50" viewBox="0 0 50 50" tabindex="0" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2042,7 +1955,7 @@
 
       <div class="events">
         <div class="container">
-          <h3 class="events__title">События</h3>
+          <h2 class="events__title">События</h2>
           <ul class="events__article-list">
             <li class="events__entries">
               <img src="img/img_desktop/event-photo1.jpg" class="events__img" alt="" />
@@ -2068,7 +1981,7 @@
                 <a href="#" class="events__hrefs">Подробнее</a>
                 </div>
             </li>
-            <li class="events__entries">
+            <li class="events__entries events_hide-block">
                 <img src="img/img_desktop/event-photo3.jpg" class="events__img" alt="" />
                 <div class="events__data-container">
                 <span class="events__signature">Еврейский музей<br/>
@@ -2078,27 +1991,38 @@
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
               </li>
-
-              <li id="events_hidden-block1" class="events__entries  events_active">
+              <ul class="events__hide-article-list">
+              <li  class="events__entries  events__hide-entries">
                 <img src="img/img_desktop/event-photo4.jpg" class="events__img " alt="" />
                 <div class="events__data-container">
                 <span class="events__signature">Еврейский музей<br/>
                   с 30 марта по 30 апреля</span>
                 <h4 class="events_subtitle">XXIV Международная биеннале молодого искусства</h4>
-                <p class="events__description">Внезапно, реплицированные с зарубежных источников, современные исследования представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых...</p>
+                <p class="events__description">Внезапно, реплицированные с зарубежных источников, современные исследования </p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
               </li>
-              <li id="events_hidden-block2" class="events__entries events_active">
+              <li  class="events__entries  events__hide-entries">
                 <img src="img/img_desktop/event-photo5.jpg" class="events__img " alt="" />
                 <div class="events__data-container">
                 <span class="events__signature">Еврейский музей<br/>
                 с 31 марта по 21 апреля</span>
                 <h4 class="events_subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
-                <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.</p>
+                <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
               </li>
+              <li class="events__entries  events__hide-entries events_show-block">
+                <img src="img/img_desktop/event-photo3.jpg" class="events__img" alt="" />
+                <div class="events__data-container">
+                <span class="events__signature">Еврейский музей<br/>
+                с 31 марта по 21 апреля</span>
+                <h4 class="events_subtitle">Выставка «Формация 2020»</h4>
+                <p class="events__description">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений. </p>
+                <a href="#" class="events__hrefs">Подробнее</a>
+              </div>
+              </li>
+            </ul>
           </ul>
          <button id="events-btn" class="events__btn">Все события</button>
         </div>
