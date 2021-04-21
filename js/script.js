@@ -235,7 +235,7 @@ const swiper = new Swiper(".gallery__swiper-container", {
       slidesPerColumn:2,
       slidesPerGroup:7,
       slidesPerView: 3,
-      spaceBetween: 50,
+      spaceBetween: 45,
     }
   },
   watchOverflow:true,
@@ -252,10 +252,14 @@ new Swiper(".partners-projects__swiper-container", {
   slidesPerGroup:3,
   breakpoints: {
     320:{
-
+      slidesPerGroup:1,
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
     480:{
-
+      slidesPerGroup:1,
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
     768:{
       slidesPerView: 2,
@@ -354,6 +358,16 @@ new Swiper(".publications-book", {
   },
 });
 
+new Swiper(".events__swiper-container ", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  pagination:{
+    el: '.events__pagination',
+    type: 'bullets',
+    clickable:true,
+  },
+});
 
 // инпут для вкладки галерея
 
