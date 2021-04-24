@@ -1252,11 +1252,12 @@ margin: 0 auto;
   padding: 0;
   align-items: center;
   color: #000;
-  font-weight: 500;
-    font-size: 22px;
-  min-height: 112px;
+  font-weight: 600;
+    font-size: 24px;
+  min-height: 114px;
   line-height: 32px;
   transition: color 0.2s ease-in;
+  margin: 0;
 }
 .ui-accordion-header:hover {
   color: var(--RegularFiol);
@@ -1272,11 +1273,12 @@ margin: 0 auto;
   padding-bottom: 9px;
   border-top: 1px solid #cacaca ;
 }
-
 .ui-widget-content {
   border: none;
   padding: 0;
-
+}
+.ui-widget{
+  font-family: inherit;
 }
 
 .acardion__items {
@@ -1295,7 +1297,7 @@ margin: 0 auto;
   margin: 0;
   overflow: hidden;
   padding-top: 33px;
-  height: 343px;
+  height: 341px;
 }
 .ui-icon {
   display: none;
