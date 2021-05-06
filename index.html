@@ -83,7 +83,7 @@
                   fill="currentColor"/></svg>Войти</a>
           </div>
           <div class="container header__first-menu-flex-table">
-            <button id ="burger-btn" class="header__burger-btn"><img src="img/img_table/Burger.svg" alt="burger" class="header__burger-img"></button>
+            <button id ="burger-btn" class="header__burger-btn"><img src="img/img_table/Burger.svg" alt="burger" class="header__burger-img header_mobile-img"></button>
             <img src="img/img_table/logo.svg" alt="logo-table" class="header__logo-table">
             <form action="#" class="header__burger-form">
               <button class = "header__search-btn"><img src="img/img_table/Search.svg" alt="search-table" class="header__search-table"></button>
@@ -92,18 +92,21 @@
             <form action="#" class="header_burger-form-table">
               <button class = "header__search-btn-table"><img src="img/img_table/Search.svg" alt="search-table" class="header__search-img"></button>
               <input type="search" class="header__input-search-table">
-              <button class = "header__close-btn "><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class = "header__close-btn "><svg class="header__search-svg" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2.63672" width="37.2838" height="3.72838" transform="rotate(45 2.63672 0)" class="header__close-btn-svg" fill="white"/>
                 <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" class="header__close-btn-svg" fill="white"/>
                 </svg></button>
             </form>
+            <button class = "header__search-btn-mobile"><img src="img/img_table/Search.svg" alt="search-mobile" class="header__search-img"></button>
             <form action="#" class="header_burger-form-mobile">
-              <button class = "header__search-btn-table"><img src="img/img_table/Search.svg" alt="search-table" class="header__search-img"></button>
-              <input type="search" class="header__input-search-table">
-              <button class = "header__close-btn "><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class = "header__close-btn-mobile"><svg class="header__search-svg" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2.63672" width="37.2838" height="3.72838" transform="rotate(45 2.63672 0)" class="header__close-btn-svg" fill="white"/>
                 <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" class="header__close-btn-svg" fill="white"/>
                 </svg></button>
+              <div class="header__search-input-container">
+              <button class = "header__search-btn-mobile-hidden"><img src="img/img_table/Search.svg" alt="search-mobile" class="header__search-img  header_mobile-img-hidden"></button>
+              <input type="search" class="header__input-search-mobile">
+              </div>
             </form>
           </div>
         </div>

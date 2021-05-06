@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function(){
       document.querySelector('.header__burger-btn').classList.add('display_none');
       document.querySelector('.header__logo-table').classList.add('display_none');
       document.querySelector('.header__input-search-table').classList.add('search_active');
-      document.querySelector('.header_burger-form-table').style.width = '1023px';
+      document.querySelector('.header_burger-form-table').style.width = '100%';
       document.querySelector('.header__close-btn').classList.add('btn_close-active');
     })
   };
@@ -60,6 +60,25 @@ window.addEventListener('DOMContentLoaded', function(){
   }
 
   tableBurgerClosed ();
+
+  let mobileBurgerActive = () =>{
+    document.querySelector('.header__search-btn-mobile').addEventListener('click', function() {
+      document.querySelector('.header_burger-form-mobile').classList.add('search_active');
+      document.querySelector('.header__search-btn-mobile').classList.add('display_none');
+    })
+  };
+
+  mobileBurgerActive ();
+
+  let mobileBurgerClose = () =>{
+    document.querySelector('.header__close-btn-mobile').addEventListener('click', function() {
+      document.querySelector('.header_burger-form-mobile').classList.remove('search_active');
+      document.querySelector('.header__search-btn-mobile').classList.remove('display_none');
+    })
+  };
+
+  mobileBurgerClose ();
+
 
   let subtitleChoices = () =>{
 
@@ -206,9 +225,11 @@ const swiper = new Swiper(".gallery__swiper-container", {
   },
   breakpoints: {
     320:{
-
+      slidesPerGroup:1,
+      slidesPerView: 1,
     },
-    480:{
+    450:{
+      slidesPerColumn:2,
       slidesPerGroup:1,
       slidesPerView: 1,
       spaceBetween: 10,
@@ -254,7 +275,7 @@ new Swiper(".partners-projects__swiper-container", {
     320:{
       slidesPerGroup:1,
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 20,
     },
     480:{
       slidesPerGroup:1,
@@ -312,7 +333,8 @@ new Swiper(".publications-book", {
 
     },
     480:{
-
+      slidesPerGroup:1,
+      slidesPerView: 1,
     },
     768:{
       slidesPerGroup:2,
