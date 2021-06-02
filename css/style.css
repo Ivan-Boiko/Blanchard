@@ -966,8 +966,6 @@ padding-bottom: 6.5px;
     align-items: center;
     margin-bottom: 24px;
     padding-left: 9px;
-    min-width: 50px;
-    max-width: 139px;
     padding-top: 16px;
 }
 .gallery__swiper-container{
@@ -1052,6 +1050,9 @@ transition: fill 0.2s ease-in;
 }
 .gallery-menu__subtitle-table{
   display: none;
+}
+.swiper-pagination-fraction{
+  width: inherit;
 }
 @media (max-width:1650px){
   .gallery__swiper-container{
@@ -1208,21 +1209,21 @@ transition: fill 0.2s ease-in;
 
 /* KATALOG */
 
-.katalog{
+.catalog{
   padding-top: 80px;
 }
-.katalog__language {
+.catalog__language {
   display: flex;
   padding-bottom: 18px;
 
 }
-.katalog__title {
+.catalog__title {
   font-size: var(--fontSizeTitle);
   line-height: 65px;
   padding-right: 35px;
 
 }
-.katalog__btn{
+.catalog__btn{
   width: 60px;
   max-width: 60px;
   min-height: 60px;
@@ -1232,26 +1233,26 @@ transition: fill 0.2s ease-in;
   outline: none;
   transition: box-shadow 0.2s ease-in;
 }
-.katalog__btn:not(:last-child){
+.catalog__btn:not(:last-child){
   margin-right: 31px;
 }
-.katalog__btn:hover{
+.catalog__btn:hover{
   box-shadow: 0px 3px 45px var(--DarkFiol);
   transition: box-shadow 0.2s ease-in-out;
 }
-.katalog__country {
+.catalog__country {
   vertical-align: bottom;
   border: none;
   outline: none;
 }
-.katalog__btn:focus {
+.catalog__btn:focus {
   border: 3px solid var(--DarkFiol);
   border-radius: 30px;
   outline: none;
 
 }
 
-.katalog__subtitle {
+.catalog__subtitle {
   max-width: 1100px;
   font-size: 16px;
   line-height: 32px;
@@ -1259,41 +1260,41 @@ transition: fill 0.2s ease-in;
   display: none;
 }
 
-.katalog-painter {
+.catalog-painter {
   display: flex;
   max-width: 100%;
   align-items: flex-start;
 }
-.katalog-painter__information {
+.catalog-painter__information {
   max-width: 750px;
   margin-right: 49px;
   display: none;
 }
-.katalog-painter__avatar{
+.catalog-painter__avatar{
   min-height: 273px;
 }
-.katalog-painter_active{
+.catalog-painter_active{
   display: block;
 }
 
-.katalog-painter__title {
+.catalog-painter__title {
   padding-top: 22px;
   font-size: 24px;
   line-height: 43px;
   font-weight: 600;
   color: black;
 }
-.katalog-painter__life {
+.catalog-painter__life {
   font-size: 12px;
   color: gray;
 }
-.katalog-painter__subtitle {
+.catalog-painter__subtitle {
   font-size: 16px;
   line-height: 32px;
   margin: 0;
   padding-top: 7px;
 }
-.katalog_active{
+.catalog__subtitle_active{
   display: block;
 }
 
@@ -1301,7 +1302,7 @@ transition: fill 0.2s ease-in;
   width: 100%;
 }
 
-.acardion__list {
+.accordion__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1310,45 +1311,43 @@ transition: fill 0.2s ease-in;
 .tab__content{
   display: none;
 }
-.acardion_active{
+.accordion_active{
   display: block;
 }
 
-.acordion__persons{
+.accordion__persons{
   font-weight: 500;
   transition: color 0.2s ease-in;
-  transition: text-decoration 0.2s ease-in;
 }
-.acordion__persons:not(:last-child){
+.accordion__persons:not(:last-child){
   margin-bottom: 15px;
 }
-.acordion__persons:nth-child(12n){
+.accordion__persons:nth-child(12n){
   margin-right: 19px;
 }
-.acordion__persons:hover {
-  text-decoration: underline rgba(157, 92, 208, 0.5);
-  transition: text-decoration 0.2s ease-in;
+.accordion__persons:hover {
+
   transition: color 0.2s ease-in;
   cursor: pointer;
   color: var(--RegularFiol);
 }
-.acordion__persons:active{
+.accordion__persons:active{
   color: var(--DarkFiol);
   border: none;
   outline: none;
 }
 
-.acardion__svg{
+.accordion__svg{
   display: inline-block;
   margin-left: auto;
   outline: none;
   transition: transform 0.3s ease-in-out;
 }
-.acardion__svg:focus{
+.accordion__svg:focus{
   border: 3px solid var(--LightFiol);
   border-radius: 25px;
 }
-.ui-state-active .acardion__svg{
+.ui-state-active .accordion__svg{
   transform: rotate(180deg);
   transition: transform 0.3s ease-in-out;
 }
@@ -1397,7 +1396,7 @@ transition: fill 0.2s ease-in;
   font-family: inherit;
 }
 
-.acardion__items {
+.accordion__items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1428,88 +1427,88 @@ transition: fill 0.2s ease-in;
   border-bottom: 1px solid var(--DarkFiol);
   border-radius: 0px;
 }
-.katalog__btn_bg{
+.catalog__btn_bg{
   border: 2px solid var(--LightFiol)
 }
 .acardinon__persons-color{
   color:var(--RegularFiol);
 }
 @media (max-width:1500px){
-  .acardion__items{
+  .accordion__items{
     max-height: 400px;
   }
   .ui-accordion .ui-accordion-content{
     height: 438px;
   }
-  .acordion__persons:first-child{
+  .accordion__persons:first-child{
     margin-right: 60px;
   }
 }
 @media (max-width:1300px){
-  .katalog-painter__information{
+  .catalog-painter__information{
     max-width: 436px;
   }
-  .acordion__persons:first-child{
+  .accordion__persons:first-child{
     margin-right: 86px;
   }
-  .katalog__btn{
+  .catalog__btn{
     margin-top: 11px;
   }
-  .katalog__language {
+  .catalog__language {
     padding-bottom: 11px;
   }
 }
 @media (max-width:1020px){
-  .katalog-painter{
+  .catalog-painter{
     flex-direction: column;
   }
-  .katalog-painter__information{
+  .catalog-painter__information{
     order: 2;
   }
-  .katalog__language {
+  .catalog__language {
     padding-bottom: 16px;
   }
-  .katalog__btn{
+  .catalog__btn{
     margin-top: 5px;
   }
-  .katalog__btn:not(:last-child){
+  .catalog__btn:not(:last-child){
     margin-right: 32px;
   }
-  .katalog__subtitle {
+  .catalog__subtitle {
     margin-bottom: 20px;
   }
   .ui-accordion .ui-accordion-content{
     height: 343px;
   }
-  .acardion__items{
+  .accordion__items{
     max-height: 300px;
   }
-  .acordion__persons:first-child{
+  .accordion__persons:first-child{
     margin-right: 0;
   }
-  .acardion__items{
+  .accordion__items{
     align-content: space-between;
   }
-  .acordion__persons:nth-child(12n){
+  .accordion__persons:nth-child(12n){
     margin-right: 32px;
   }
-  .acordion__persons:nth-child(22n){
+  .accordion__persons:nth-child(22n){
     margin-left:6px;
   }
-  .katalog-painter__information{
+  .catalog-painter__information{
     margin-right: 0;
     margin-top: 48px;
     max-width: 670px;
   }
 }
 @media (max-width:767px){
-  .katalog__language{
+  .catalog__language{
     flex-direction: column;
   }
-  .katalog__btn:not(:last-child){
+  .catalog__btn:not(:last-child){
     margin-right: 25px;
   }
-  .acardion__items{
+  .accordion__items{
     justify-content: flex-start;
     flex-wrap: wrap;
     max-height: 100%;
@@ -1521,36 +1520,36 @@ transition: fill 0.2s ease-in;
     height: 420px;
     padding-top: 22px;
   }
-  .katalog-painter__information{
+  .catalog-painter__information{
     text-align: center;
   }
 }
 @media (max-width: 450px){
-  .katalog__language{
+  .catalog__language{
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 19px;
   }
-  .katalog__title{
+  .catalog__title{
     font-size: 28px;
 line-height: 38px;
   }
-  .katalog__subtitle {
+  .catalog__subtitle {
     display: none;
   }
-  .katalog__btn{
+  .catalog__btn{
     width: 44px;
     min-height: 44px;
   }
-  .katalog__btn:not(:last-child){
+  .catalog__btn:not(:last-child){
     margin-right: 13px;
   }
-  .katalog__country{
+  .catalog__country{
     vertical-align: middle;
     width: 32px;
     min-height: 32px;
   }
-  .katalog__btn-container{
+  .catalog__btn-container{
     max-width: 100%;
   }
   .ui-accordion .ui-accordion-header{
@@ -1558,31 +1557,31 @@ line-height: 38px;
     line-height: 32px;
     min-height:74px;
   }
-  .acardion__svg{
+  .accordion__svg{
     width: 25px;
     height: 25px;
   }
-  .katalog-painter__avatar{
+  .catalog-painter__avatar{
     min-height: 180px;
   }
-  .katalog-painter__title{
+  .catalog-painter__title{
     padding-top: 10px;
     line-height: 50px;
   }
-  .acordion__persons:nth-child(22n){
+  .accordion__persons:nth-child(22n){
     margin-left:0;
   }
-  .katalog-painter__information{
+  .catalog-painter__information{
     margin-top: 50px;
   }
-  .katalog-painter__subtitle{
+  .catalog-painter__subtitle{
     max-width: 287px;
   }
   .ui-accordion .ui-accordion-content{
     height: 802px;
     padding-top: 22px;
   }
-  .katalog-painter__information{
+  .catalog-painter__information{
     text-align: left;
   }
 }
@@ -1984,8 +1983,6 @@ display: none;
   display: flex;
   align-items: center;
   margin-bottom: 29px;
-  min-width: 50px;
-  max-width: 130px;
 }
 .editions__pagination{
   margin-left: 18px;

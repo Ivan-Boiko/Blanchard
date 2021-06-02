@@ -82,43 +82,43 @@ window.addEventListener('DOMContentLoaded', function(){
 
   let subtitleChoices = () =>{
 
-    document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
+    document.querySelectorAll('.catalog__btn').forEach(function(tabsLang){
       tabsLang.addEventListener('click', function(event){
         const path = event.currentTarget.dataset.path;
-        document.querySelectorAll('.katalog__subtitle').forEach(function(tabContent){
-          tabContent.classList.remove('katalog_active')
+        document.querySelectorAll('.catalog__subtitle').forEach(function(tabContent){
+          tabContent.classList.remove('catalog__subtitle_active')
         })
-        document.querySelector(`[data-target="${path}"]`).classList.add('katalog_active')
+        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__subtitle_active')
       })
     });
   }
   subtitleChoices();
 
 
-let acardionChoices = () => {
+let accordionChoices = () => {
 
-  document.querySelectorAll('.katalog__btn').forEach(function(tabsLang){
+  document.querySelectorAll('.catalog__btn').forEach(function(tabsLang){
     tabsLang.addEventListener('click', function(event){
       const path = event.currentTarget.dataset.path;
       document.querySelectorAll('.tab__content').forEach(function(tabContent){
-        tabContent.classList.remove('acardion_active')
+        tabContent.classList.remove('accordion_active')
       })
-      document.querySelector(`[data-country="${path}"]`).classList.add('acardion_active')
+      document.querySelector(`[data-country="${path}"]`).classList.add('accordion_active')
     })
   });
 }
-acardionChoices ();
+accordionChoices ();
 
 let painterChoices = () => {
 
-  document.querySelectorAll('.acordion__persons').forEach(function(tabsAcardion){
+  document.querySelectorAll('.accordion__persons').forEach(function(tabsAcardion){
   tabsAcardion.addEventListener('click', function(event){
   const path = event.currentTarget.dataset.path;
-  document.querySelectorAll('.katalog-painter__information').forEach(function(tabContent){
-    tabContent.classList.remove('katalog-painter_active')
+  document.querySelectorAll('.catalog-painter__information').forEach(function(tabContent){
+    tabContent.classList.remove('catalog-painter_active')
 
   })
-  document.querySelector(`[data-target="${path}"]`).classList.add('katalog-painter_active')
+  document.querySelector(`[data-target="${path}"]`).classList.add('catalog-painter_active')
   })
   });
 }
@@ -126,23 +126,23 @@ painterChoices();
 
 
 let countryBackgroundСhanges = () => {
-  document.querySelectorAll('.katalog__btn').forEach(function(tabsAcardion){
+  document.querySelectorAll('.catalog__btn').forEach(function(tabsAcardion){
     tabsAcardion.addEventListener('click', function(event){
     const path = event.currentTarget.dataset.path;
-      document.querySelectorAll('.katalog__btn').forEach(function(tabContent){
-        tabContent.classList.remove('katalog__btn_bg')
+      document.querySelectorAll('.catalog__btn').forEach(function(tabContent){
+        tabContent.classList.remove('catalog__btn_bg')
         })
-          document.querySelector(`[data-path="${path}"]`).classList.add('katalog__btn_bg')
+          document.querySelector(`[data-path="${path}"]`).classList.add('catalog__btn_bg')
           })
     });
 }
 countryBackgroundСhanges ();
 
 let painterColorСhanges = () => {
-  document.querySelectorAll('.acordion__persons').forEach(function(tabsAcardion){
+  document.querySelectorAll('.accordion__persons').forEach(function(tabsAcardion){
     tabsAcardion.addEventListener('click', function(event){
     const path = event.currentTarget.dataset.path;
-      document.querySelectorAll('.acordion__persons').forEach(function(tabContent){
+      document.querySelectorAll('.accordion__persons').forEach(function(tabContent){
         tabContent.classList.remove('acardinon__persons-color')
         })
           document.querySelector(`[data-path="${path}"]`).classList.add('acardinon__persons-color')
@@ -202,15 +202,15 @@ let showEvents = () => {
 
 
 
-// acardion
+// accordion
 
-$( ".acardion" ).accordion({
+$( ".accordion" ).accordion({
   collapsible: true,
   animate: 500,
   active:0,
   heightStyle: "content",
 });
-$ ('.acardion').accordion("refresh");
+$ ('.accordion').accordion("refresh");
 
 // Свипер для вкладки проэкты
 
