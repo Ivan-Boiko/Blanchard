@@ -1005,7 +1005,7 @@ padding-bottom: 6.5px;
 }
 .gallery__slide-btn::after{
 content: "";
-background-image: url("/img/img_desktop/hover__galery.png");
+background-image: url("../img/img_desktop/hover__galery.png");
 position: absolute;
 background-position: center;
 width: 70%;
@@ -1250,6 +1250,12 @@ transition: fill 0.2s ease-in;
   cursor: pointer;
   outline: none;
   transition: box-shadow 0.2s ease-in;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ui-widget button{
+  font-family: inherit;
+  font-size: 16px;
 }
 .catalog__btn-item:not(:last-child){
   margin-right: 35px;
@@ -1435,8 +1441,7 @@ transition: fill 0.2s ease-in;
   overflow: hidden;
   padding-top: 26px;
   height: 344px;
-  max-width: 695px;
-  align-content: space-between;
+  padding-right: 50px;
 }
 .ui-icon {
   display: none;
