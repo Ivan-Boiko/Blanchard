@@ -103,11 +103,59 @@ let accordionChoices = () => {
       document.querySelectorAll('.tab__content').forEach(function(tabContent){
         tabContent.classList.remove('accordion_active')
       })
-      document.querySelector(`[data-country="${path}"]`).classList.add('accordion_active')
+      document.querySelectorAll('.accordion__persons').forEach(function(tabContent){
+        tabContent.classList.remove('acardinon__persons-color')
+      })
+      document.querySelectorAll('.catalog-painter__information').forEach(function(tabContent){
+        tabContent.classList.remove('catalog-painter_active')
+      })
+    document.querySelector(`[data-country="${path}"]`).classList.add('accordion_active')
+
+      if (path === 'germany') {
+        let germany = document.querySelector('.catalog-painter__germany');
+        let firstElementGermany = germany.getElementsByClassName('catalog-painter__information')
+        firstElementGermany[0].classList.toggle('catalog-painter_active');
+        let germanyBtn = document.getElementById('germany')
+        let germanyBtnActive = germanyBtn.getElementsByClassName('accordion__persons')
+        germanyBtnActive[0].classList.add('acardinon__persons-color')
+      }
+      if (path === 'franch') {
+        let franch = document.querySelector('.catalog-painter__franch');
+        let firstElementFranch = franch.getElementsByClassName('catalog-painter__information')
+        firstElementFranch[0].classList.toggle('catalog-painter_active');
+        let franchBtn = document.getElementById('franch')
+        let franchBtnActive = franchBtn.getElementsByClassName('accordion__persons')
+        franchBtnActive[0].classList.add('acardinon__persons-color')
+      }
+      if (path === 'italian') {
+        let italian = document.querySelector('.catalog-painter__italian');
+        let firstElementItalian = italian.getElementsByClassName('catalog-painter__information')
+        firstElementItalian[0].classList.toggle('catalog-painter_active');
+        let italianBtn = document.getElementById('italian')
+        let italianBtnActive = italianBtn.getElementsByClassName('accordion__persons')
+        italianBtnActive[0].classList.add('acardinon__persons-color')
+      }
+      if (path === 'russia') {
+        let russia = document.querySelector('.catalog-painter__russia');
+        let firstElementRussia = russia.getElementsByClassName('catalog-painter__information')
+        firstElementRussia[0].classList.toggle('catalog-painter_active');
+        let russiaBtn = document.getElementById('russia')
+        let russiaBtnActive = russiaBtn.getElementsByClassName('accordion__persons')
+        russiaBtnActive[0].classList.add('acardinon__persons-color')
+      }
+      if (path === 'belgium') {
+        let belgium = document.querySelector('.catalog-painter__belgium');
+        let firstElementBelgium = belgium.getElementsByClassName('catalog-painter__information')
+        firstElementBelgium[0].classList.toggle('catalog-painter_active');
+        let belgiumBtn = document.getElementById('belgium')
+        let belgiumBtnActive = belgiumBtn.getElementsByClassName('accordion__persons')
+        belgiumBtnActive[0].classList.add('acardinon__persons-color')
+      }
     })
   });
 }
 accordionChoices ();
+
 
 let painterChoices = () => {
 
@@ -123,7 +171,6 @@ let painterChoices = () => {
   });
 }
 painterChoices();
-
 
 let countryBackgroundСhanges = () => {
   document.querySelectorAll('.catalog__btn').forEach(function(tabsAcardion){

@@ -1008,8 +1008,8 @@ content: "";
 background-image: url("../img/img_desktop/hover__galery.png");
 position: absolute;
 background-position: center;
-width: 70%;
-height: 70%;
+width: 90%;
+height: 90%;
 z-index: 100;
 top: 50%;
 left: 50%;
@@ -1290,8 +1290,11 @@ transition: fill 0.2s ease-in;
   max-width: 100%;
   align-items: flex-start;
 }
-.catalog-painter__information {
+.catalog-painter__container{
   max-width: 750px;
+}
+.catalog-painter__information {
+
   margin-right: 49px;
   display: none;
 }
@@ -1379,6 +1382,15 @@ transition: fill 0.2s ease-in;
 .ui-state-active .genrel-bg{
   fill: var(--DarkFiol);
   transition: fill 0.2s ease-in;
+}
+.accordion__svg-arrow{
+  stroke: black;
+}
+.ui-accordion-header:hover .accordion__svg-arrow{
+  stroke: #ffffff;
+}
+.ui-state-active .accordion__svg-arrow{
+  stroke: #ffffff;
 }
 .ui-state-default {
   border: none;
