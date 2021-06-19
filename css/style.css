@@ -359,7 +359,6 @@ vertical-align: middle;
 
 .header__form {
   display: flex;
-  margin-right: 5px;
 }
 .header__form:focus-within {
   padding: 1px;
@@ -367,16 +366,21 @@ vertical-align: middle;
 }
 
 .header__form-btn {
-  padding-right: 8px;
+  padding-right: 32px;
+  line-height: 0.15;
+  max-height: 28px;
+  max-width: 28px;
+
 }
 .header__form-input {
-  width: 215px;
-  max-width:215px;
+  width: 219px;
+  max-width:219px;
   border: none;
   border-bottom: 1px solid white;
   color: white;
   cursor: pointer;
   font-size: 18px;
+  line-height: 0.15;
 }
 .header__form-input:focus {
   color: var(--LightFiol);
@@ -390,7 +394,8 @@ vertical-align: middle;
 .header__svg{
   max-width: 28px;
   min-height: 28px;
-  padding-top: 5px;
+  vertical-align: middle;
+  padding-top: 6px;
   transform: rotate(360deg);
 }
 .header--svg{
@@ -1291,7 +1296,7 @@ transition: fill 0.2s ease-in;
   align-items: flex-start;
 }
 .catalog-painter__container{
-  max-width: 750px;
+  max-width: 800px;
 }
 .catalog-painter__information {
 
@@ -1306,7 +1311,7 @@ transition: fill 0.2s ease-in;
 }
 
 .catalog-painter__title {
-  padding-top: 22px;
+  margin-top: 22px;
   font-size: 24px;
   line-height: 43px;
   font-weight: 600;
@@ -1320,7 +1325,7 @@ transition: fill 0.2s ease-in;
   font-size: 16px;
   line-height: 32px;
   margin: 0;
-  padding-top: 7px;
+  margin-top: 7px;
 }
 .catalog__subtitle_active{
   display: block;
@@ -1385,12 +1390,15 @@ transition: fill 0.2s ease-in;
 }
 .accordion__svg-arrow{
   stroke: black;
+  transition: stroke 0.2s ease-in;
 }
 .ui-accordion-header:hover .accordion__svg-arrow{
   stroke: #ffffff;
+  transition: stroke 0.2s ease-in;
 }
 .ui-state-active .accordion__svg-arrow{
   stroke: #ffffff;
+  transition: stroke 0.2s ease-in;
 }
 .ui-state-default {
   border: none;
@@ -1445,15 +1453,16 @@ transition: fill 0.2s ease-in;
   display: block;
 }
 .accordion__items:nth-child(12){
-  padding-right: 23px;
+  margin-right: 23px;
 }
 .ui-accordion .ui-accordion-content {
   padding: 0;
   margin: 0;
   overflow: hidden;
   padding-top: 26px;
-  height: 344px;
+  max-height: 344px;
   padding-right: 50px;
+  padding-bottom: 27px;
 }
 .ui-icon {
   display: none;
@@ -1601,7 +1610,7 @@ line-height: 38px;
     min-height: 180px;
   }
   .catalog-painter__title{
-    padding-top: 10px;
+    margin-top: 10px;
     line-height: 50px;
   }
   .accordion__persons:nth-child(22n){
@@ -1676,7 +1685,10 @@ line-height: 38px;
   line-height: 16px;
   color: #999999;
 }
-.events_subtitle {
+.events__date{
+  padding-top: 0;
+}
+.events__subtitle {
   max-width: 420px;
   padding-top: 3px;
   font-size: 24px;
@@ -1742,21 +1754,8 @@ line-height: 38px;
 .events__btn:focus{
   border: 3px solid var(--LightFiol);
 }
-.events__hide-article-list{
-  display: none;
-  margin-top: 20px;
-  width: 100%;
-  justify-content: space-around;
-}
-.events_active{
-display: flex;
-}
-.events_show-block{
-  display: none;
-}
-.events__swiper-container{
-display: none;
-}
+
+
 @media (max-width:1750px){
   .events__article-list{
     justify-content: space-between;
@@ -1810,19 +1809,12 @@ display: none;
   .events_subtitle:nth-child(2n) {
     padding-right: 25px;
   }
-  .events_hide-block{
-    display: none;
-  }
   .events_show-block{
     display: block;
   }
   .events__hide-article-list{
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  .events__hide-entries:last-child{
-    margin-top: 20px;
-    margin-left: auto;
   }
 }
 @media (max-width: 767px){
@@ -1836,9 +1828,7 @@ display: none;
   .events__hide-article-list{
     justify-content: center;
   }
-  .events__hide-entries:last-child{
-    margin: 0;
-  }
+
 }
 @media (max-width: 450px){
   .events__title{
@@ -1848,9 +1838,6 @@ display: none;
   .events{
     padding-top: 55px;
     padding-bottom: 72px;
-  }
-  .events__article-list{
-    display: none;
   }
   .events__btn{
     display: none;
@@ -2012,19 +1999,19 @@ display: none;
 .editions__books{
   width: 100%;
   max-width: 1400px;
-  margin-top: 112px;
+  margin-top: 115px;
   margin-left: 173px;
 }
 .editiions__tabs-container{
   display: flex;
   align-items: center;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 }
 .editions__pagination{
   margin-left: 18px;
   color: white;
   display: flex;
-  margin-right: 15px;
+  margin-right: 19px;
 }
 .editions-photo__btn:hover .genrel-bg{
   fill: var(--RegularFiol);

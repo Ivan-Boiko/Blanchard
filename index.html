@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blanchard</title>
+    <script src="js/jquery-3.6.0.min.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/Inputmask/dist/inputmask.min.js"></script>
@@ -11,8 +12,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/script.js"></script>
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="js/script.js"></script>
       <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/swiper.css" />
@@ -1914,145 +1915,75 @@
       <div class="events">
         <div class="container">
           <h2 class="events__title">События</h2>
-          <div class="events__article-list">
-            <div class="events__entries">
-              <img src="img/img_desktop/event-photo1.jpg" class="events__img" alt="" />
+          <ul class="events__article-list">
+            <li class="events__entries">
+              <img src="img/img_desktop/event-photo1.jpg" class="events__img" alt="page1" />
               <div class="events__data-container">
-              <span class="events__signature">Музей им. Щусева<br/>
-                с 20 марта по 30 апреля</span>
-                <h4 class="events_subtitle">
+              <div class="events__signature">Музей им. Щусева</div>
+                <div class="events__date events__signature">с 20 марта по 30 апреля</div>
+                <h3 class="events__subtitle">
                   Книжная гравюра в живом восприятии
-                </h4>
+                </h3>
                 <p class="events__description events__description_first">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
-            </div>
-            <div class="events__entries">
-                <img src="img/img_desktop/event-photo2.jpg" class="events__img" alt="" />
+            </li>
+            <li class="events__entries">
+                <img src="img/img_desktop/event-photo2.jpg" class="events__img" alt="page2" />
                 <div class="events__data-container">
-                <span class="events__signature">ММОМА<br/>
-                24 марта 19:00</span>
-                <h4 class="events_subtitle">
+                <div class="events__signature">ММОМА</div>
+                <div class="events__date events__signature">24 марта 19:00</div>
+                <h3 class="events__subtitle">
                   «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                </h4>
+                </h3>
                 <p class="events__description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта</p>
                 <a href="#" class="events__hrefs">Подробнее</a>
                 </div>
-            </div>
-            <div class="events__entries events_hide-block">
-                <img src="img/img_desktop/event-photo3.jpg" class="events__img" alt="" />
+            </li>
+            <li class="events__entries ">
+                <img src="img/img_desktop/event-photo3.jpg" class="events__img" alt="page3" />
                 <div class="events__data-container">
-                <span class="events__signature">Еврейский музей<br/>
-                с 31 марта по 21 апреля</span>
-                <h4 class="events_subtitle">Выставка «Формация 2020»</h4>
+                <div class="events__signature">Еврейский музей</div>
+                <div class="events__date events__signature">с 31 марта по 21 апреля</div>
+                <h3 class="events__subtitle">Выставка «Формация 2020»</h3>
                 <p class="events__description">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений. </p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
-              </div>
-              <div class="events__hide-article-list">
-              <div  class="events__entries  events__hide-entries">
-                <img src="img/img_desktop/event-photo4.jpg" class="events__img " alt="" />
+              </li>
+
+              <li class="events__entries ">
+                <img src="img/img_desktop/event-photo4.jpg" class="events__img " alt="page4" />
                 <div class="events__data-container">
-                <span class="events__signature">Еврейский музей<br/>
-                  с 30 марта по 30 апреля</span>
-                <h4 class="events_subtitle">XXIV Международная биеннале молодого искусства</h4>
+                <div class="events__signature">Еврейский музей</div>
+                <div class="events__date events__signature">с 30 марта по 30 апреля</div>
+                <h3 class="events__subtitle">XXIV Международная биеннале молодого искусства</h3>
                 <p class="events__description">Внезапно, реплицированные с зарубежных источников, современные исследования </p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
-              </div>
-              <div  class="events__entries  events__hide-entries">
-                <img src="img/img_desktop/event-photo5.jpg" class="events__img " alt="" />
+              </li>
+              <li class="events__entries  ">
+                <img src="img/img_desktop/event-photo5.jpg" class="events__img " alt="page5" />
                 <div class="events__data-container">
-                <span class="events__signature">Еврейский музей<br/>
-                с 31 марта по 21 апреля</span>
-                <h4 class="events_subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
+                <div class="events__signature">Еврейский музей</div>
+                <div class="events__date events__signature">с 31 марта по 21 апреля</div>
+                <h3 class="events__subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
                 <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
-              </div>
-              <div class="events__entries  events__hide-entries events_show-block">
-                <img src="img/img_desktop/event-photo3.jpg" class="events__img" alt="" />
+              </li>
+              <li class="events__entries  ">
+                <img src="img/img_desktop/event-photo5.jpg" class="events__img " alt="page5" />
                 <div class="events__data-container">
-                <span class="events__signature">Еврейский музей<br/>
-                с 31 марта по 21 апреля</span>
-                <h4 class="events_subtitle">Выставка «Формация 2020»</h4>
-                <p class="events__description">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений. </p>
+                <div class="events__signature">Еврейский музей</div>
+                <div class="events__date events__signature">с 31 марта по 21 апреля</div>
+                <h3 class="events__subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                 <a href="#" class="events__hrefs">Подробнее</a>
               </div>
-              </div>
-            </div>
+              </li>
+            </ul>
+            <button class="events__btn">Все события</button>
           </div>
-          <div class="events__swiper-container swiper-container">
-              <div class="events__swiper-wrapper swiper-wrapper">
-                  <div class="events__swiper-slide swiper-slide">
-                      <div class="events__entries">
-                        <img src="img/img_desktop/event-photo1.jpg" class="events__img" alt="" />
-                        <div class="events__data-container">
-                        <span class="events__signature">Музей им. Щусева<br/>
-                          с 20 марта по 30 апреля</span>
-                          <h4 class="events_subtitle">
-                            Книжная гравюра в живом восприятии
-                          </h4>
-                          <p class="events__description events__description_first">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                          <a href="#" class="events__hrefs">Подробнее</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="events__swiper-slide swiper-slide">
-                    <div class="events__entries">
-                      <img src="img/img_desktop/event-photo2.jpg" class="events__img" alt="" />
-                      <div class="events__data-container">
-                      <span class="events__signature">ММОМА<br/>
-                      24 марта 19:00</span>
-                      <h4 class="events_subtitle">
-                        «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                      </h4>
-                      <p class="events__description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта</p>
-                      <a href="#" class="events__hrefs">Подробнее</a>
-                      </div>
-                  </div>
-                  </div>
-                  <div class="events__swiper-slide swiper-slide">
-                    <div class="events__entries">
-                      <img src="img/img_desktop/event-photo3.jpg" class="events__img" alt="" />
-                      <div class="events__data-container">
-                      <span class="events__signature">Еврейский музей<br/>
-                      с 31 марта по 21 апреля</span>
-                      <h4 class="events_subtitle">Выставка «Формация 2020»</h4>
-                      <p class="events__description">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений. </p>
-                      <a href="#" class="events__hrefs">Подробнее</a>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="events__swiper-slide swiper-slide">
-                    <div  class="events__entries">
-                      <img src="img/img_desktop/event-photo4.jpg" class="events__img " alt="" />
-                      <div class="events__data-container">
-                      <span class="events__signature">Еврейский музей<br/>
-                        с 30 марта по 30 апреля</span>
-                      <h4 class="events_subtitle">XXIV Международная биеннале молодого искусства</h4>
-                      <p class="events__description">Внезапно, реплицированные с зарубежных источников, современные исследования </p>
-                      <a href="#" class="events__hrefs">Подробнее</a>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="events__swiper-slide swiper-slide">
-                    <div  class="events__entries">
-                      <img src="img/img_desktop/event-photo5.jpg" class="events__img " alt="" />
-                      <div class="events__data-container">
-                      <span class="events__signature">Еврейский музей<br/>
-                      с 31 марта по 21 апреля</span>
-                      <h4 class="events_subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
-                      <p class="events__description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                      <a href="#" class="events__hrefs">Подробнее</a>
-                    </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-pagination events__pagination"></div>
-         <button id="events-btn" class="events__btn">Все события</button>
-        </div>
       </div>
 
       <div class="editions">

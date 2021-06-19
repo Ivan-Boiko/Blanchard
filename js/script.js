@@ -199,14 +199,39 @@ let painterColorСhanges = () => {
 painterColorСhanges ();
 
 
-let showEvents = () => {
-        document.querySelector('.events__btn').addEventListener('click', function(){
-        document.querySelector(".events__hide-article-list").classList.add('events_active')
-        document.querySelector(".events__btn").style.display = "none";
-      })
-    };
+$(document).ready(function(){
+  if($(window).width() > 980){
+    var numToShow = 3;
+  }
+  if($(window).width() < 1025){
+    var numToShow = 2;
+  }
+  if($(window).width() < 600){
+    var numToShow = 6;
+  }
 
-  showEvents();
+  var list = $(".events__article-list li");
+  var button = $(".events__btn");
+  var numInList = list.length;
+  list.hide();
+if (numInList > numToShow){
+    button.show(100);
+  }
+  if (numInList <= numToShow){
+    button.hide(100);
+  }
+  list.slice(0, numToShow).show();
+
+  button.click(function(){
+    var showing = list.filter(':visible').length;
+    list.slice(showing - 1, showing + numToShow).fadeIn();
+    var nowShowing = list.filter(':visible').length;
+    if(nowShowing >= numInList){
+      button.fadeOut("2000");
+    }
+
+  });
+});
 
 
     // VALIDATION
