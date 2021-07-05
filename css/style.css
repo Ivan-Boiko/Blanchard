@@ -143,7 +143,7 @@ input::-webkit-inner-spin-button {
 }
 .focus-svg:focus {
   outline: none;
-  border: 3px solid var(--LightFiol);
+  border: 2px solid var(--LightFiol);
   border-radius: 25px;
 }
 .swiper-button-prev, .swiper-button-next{
@@ -989,9 +989,10 @@ padding-bottom: 6.5px;
   cursor: pointer;
   position: relative;
   z-index: 1;
+  outline: none;
 }
 
-.gallery__swiper-slide:focus{
+.gallery__slide-btn:focus{
   outline: 3px solid var(--LightFiol);
 }
 .gallery__slide-btn{
@@ -1001,13 +1002,8 @@ padding-bottom: 6.5px;
   z-index: 1000;
   top: 0;
   left: 0;
-  opacity: 0;
-  transition: opacity 0.3s  ease-in;
 }
-.gallery__slide-btn:hover{
-  opacity: 1;
-  transition: opacity  0.3s  ease-in;
-}
+
 .gallery__slide-btn::after{
 content: "";
 background-image: url("../img/img_desktop/hover__galery.png");
@@ -1018,7 +1014,16 @@ height: 90%;
 z-index: 100;
 top: 50%;
 left: 50%;
+opacity: 0;
 transform: translate(-50%, -50%);
+}
+.gallery__slide-btn:hover::after{
+  opacity: 1;
+  transition: opacity  0.3s  ease-in;
+}
+.gallery__slide-btn:focus::after{
+  opacity: 1;
+  transition: opacity  0.3s  ease-in;
 }
 .gallery__slide-btn:active{
   background:linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
@@ -1299,15 +1304,18 @@ transition: fill 0.2s ease-in;
   max-width: 800px;
 }
 .catalog-painter__information {
-
   margin-right: 49px;
   display: none;
 }
 .catalog-painter__avatar{
-  min-height: 273px;
+  width: 100%;
+  max-height: 700px;
+  object-fit: cover;
+
 }
 .catalog-painter_active{
   display: block;
+
 }
 
 .catalog-painter__title {
@@ -1333,19 +1341,22 @@ transition: fill 0.2s ease-in;
 
 .tab__content{
   width: 100%;
+
 }
 
 .accordion__list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   padding-top: 10px;
+  flex-wrap: wrap;
+  max-height: 320px;
 }
 .tab__content{
   display: none;
 }
 .accordion_active{
   display: block;
+
 }
 
 .accordion__persons{
@@ -1444,27 +1455,28 @@ transition: fill 0.2s ease-in;
 .accordion__items {
   font-size: 15px;
   padding-left: 3px;
-
 }
 
 .accordion__persons{
   font-size: 16px;
   line-height: 32px;
-  display: block;
+  display: inline-block;
 }
 .accordion__items:nth-child(12){
   margin-right: 23px;
 }
+
 .ui-accordion .ui-accordion-content {
   padding: 0;
   margin: 0;
-  overflow: hidden;
   padding-top: 26px;
-  max-height: 344px;
+  max-height: 350px;
   padding-right: 50px;
   padding-bottom: 27px;
-  columns: 2 auto;
+  overflow: hidden;
 }
+
+
 .ui-icon {
   display: none;
 }
@@ -1483,6 +1495,7 @@ transition: fill 0.2s ease-in;
 }
 .acardinon__persons-color{
   color:var(--RegularFiol);
+  border-bottom: 1px solid #9d5cd0;
 }
 @media (max-width:1500px){
   .accordion__items{
@@ -1919,11 +1932,14 @@ margin-right: 173px;
   padding-left: 24px;
   cursor: pointer;
 }
+
 .editions__items:not(:last-child){
   margin-bottom: 14px;
 }
+
 .editions__inputs{
-  display: none;
+  position: absolute;
+	opacity: 0;
 }
 .editions__label{
   cursor: pointer;
@@ -1933,26 +1949,45 @@ margin-right: 173px;
   color: var(--RegularFiol);
   transition: color 0.2s ease-in;
 }
+
+
+
+.editions__inputs:hover + .editions__span{
+border-color: #9d5cd0;
+transition: border-color 0.2s ease-in;
+}
+
+
 .editions__inputs + .editions__span{
   position: absolute;
   content: "";
-  top: 2px;
+  top: 3px;
   left: 0;
   width: 12px;
   height: 12px;
   border: 1px solid white;
-
+  transition: border-color 0.2s ease-in;
 }
+
 .editions__inputs + .editions__span::before{
   position: absolute;
   content: url("../img/img_desktop/circle.svg");
-  top:-74%;
+  top:-75%;
   left:32%;
   opacity: 0;
+  outline: none;
+}
+
+.editions__inputs:focus-visible ~ .editions__span{
+  outline: 2px solid var(--RegularFiol);
 }
 .editions__inputs:checked + .editions__span{
   border-color: var(--RegularFiol);
-  text-align: center;
+
+}
+
+.editions__inputs:checked ~ .editions__name{
+  color: var(--DarkFiol);
 }
 .editions__inputs:checked + .editions__span::before{
   opacity: 1;
@@ -2013,6 +2048,13 @@ margin-right: 173px;
   display: flex;
   margin-right: 19px;
 }
+.editions-photo__btn{
+  min-height: 30px;
+}
+
+.editions-photo__btn:focus{
+  outline: none;
+}
 .editions-photo__btn:hover .genrel-bg{
   fill: var(--RegularFiol);
   transition: fill 0.2s ease-in;
@@ -2029,15 +2071,19 @@ margin-right: 173px;
   max-width: 350px;
 }
 
+.publications-book__description{
+  display: flex;
+  justify-content: space-between;
+}
+
 .publications-book__title{
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
   color: white;
+
 }
 .publications-book__price{
-  float: right;
-  padding-top: 22px;
   color: white;
 }
 .publications-book__author{

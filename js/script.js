@@ -3,11 +3,10 @@ window.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll('.genrel-menu__btn').forEach(function(tabsMenu){
       tabsMenu.addEventListener('click', function(ev){
         const href = ev.currentTarget.dataset.href;
-          document.querySelectorAll('.hidden-menu__list').forEach(function(tabContent){
-            tabContent.classList.remove('hidden-menu--active')
-          })
+        document.querySelectorAll('.hidden-menu__list').forEach(function(tabContent){
+          tabContent.classList.remove('hidden-menu--active')
+        })
         document.querySelector(`[data-targets="${href}"]`).classList.add('hidden-menu--active');
-        console.log(href)
     });
   })
   };
@@ -156,6 +155,21 @@ let accordionChoices = () => {
 }
 accordionChoices ();
 
+let accordionChoicesAnimation = () =>{
+  document.querySelectorAll('.catalog__btn').forEach(function(tabsLang){
+    tabsLang.addEventListener('click', function(){
+      gsap.from(".catalog__subtitle", {duration: 1, opacity: 0});
+      gsap.from(".catalog-painter", {duration: 1, y:100 , opacity: 0});
+    })
+  });
+  document.querySelectorAll('.accordion__persons').forEach(function(tabsLang){
+    tabsLang.addEventListener('click', function(){
+      gsap.from(".catalog-painter__information", {duration: 1, opacity: 0, x: -150});
+
+    })
+  });
+};
+accordionChoicesAnimation ();
 
 let painterChoices = () => {
 
@@ -280,13 +294,14 @@ $( ".accordion" ).accordion({
   collapsible: true,
   animate: 500,
   active:0,
-  heightStyle: "content",
+  heightStyle: "content"
 });
 $ ('.accordion').accordion("refresh");
 
 // Свипер для вкладки проэкты
 
 const swiper = new Swiper(".gallery__swiper-container", {
+speed: 800,
   navigation: {
   nextEl: '.gallery__btn-next',
   prevEl: '.gallery__btn-prev',
@@ -326,7 +341,7 @@ const swiper = new Swiper(".gallery__swiper-container", {
     },
     1650:{
       slidesPerColumn:2,
-      slidesPerGroup:7,
+      slidesPerGroup:3,
       slidesPerView: 3,
       spaceBetween: 45,
     }
@@ -340,6 +355,7 @@ const swiper = new Swiper(".gallery__swiper-container", {
 
 
 new Swiper(".partners-projects__swiper-container", {
+  speed: 800,
   slidesPerView: 3,
   spaceBetween: 10,
   slidesPerGroup:3,
@@ -389,6 +405,7 @@ new Swiper(".partners-projects__swiper-container", {
 // Свипер для вкладки Издания
 
 new Swiper(".publications-book", {
+  speed: 800,
   slidesPerView: 3,
   spaceBetween: 50,
   slidesPerGroup:2,
