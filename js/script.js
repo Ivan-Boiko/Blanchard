@@ -15,7 +15,9 @@ window.addEventListener('DOMContentLoaded', function(){
 
   let showBurger = () =>{
     document.querySelector('#burger-btn').addEventListener('click', function() {
+      gsap.from(".burger-menu", { duration: 0.5,y: -200});
       document.querySelector('.burger-menu').classList.toggle('burger_active');
+
     })
     const tool = document.getElementById('burger-btn');
     tool.addEventListener('click', () => {
@@ -37,8 +39,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
   let tableBurgerActive = ( ) =>{
     document.querySelector('.header__search-btn-table').addEventListener('click', function() {
-      document.querySelector('.header__burger-btn').classList.add('display_none');
-      document.querySelector('.header__logo-table').classList.add('display_none');
+      document.querySelector('.header__burger-btn').style.display = "none"
+      document.querySelector('.header__logo-table').style.display = "none"
       document.querySelector('.header__input-search-table').classList.add('search_active');
       document.querySelector('.header_burger-form-table').style.width = '100%';
       document.querySelector('.header__close-btn').classList.add('btn_close-active');
@@ -50,8 +52,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
   let tableBurgerClosed = () => {
     document.querySelector('.header__close-btn').addEventListener('click', function() {
-      document.querySelector('.header__burger-btn').classList.remove('display_none');
-      document.querySelector('.header__logo-table').classList.remove('display_none');
+      document.querySelector('.header__burger-btn').style.display = "block"
+      document.querySelector('.header__logo-table').style.display = "block"
       document.querySelector('.header__input-search-table').classList.remove('search_active');
       document.querySelector('.header__close-btn').classList.remove('btn_close-active');
       document.querySelector('.header_burger-form-table').style.width = '';
@@ -220,9 +222,7 @@ $(document).ready(function(){
   if($(window).width() < 1025){
     var numToShow = 2;
   }
-  if($(window).width() < 600){
-    var numToShow = 6;
-  }
+
 
   var list = $(".events__article-list li");
   var button = $(".events__btn");
@@ -243,8 +243,10 @@ if (numInList > numToShow){
     if(nowShowing >= numInList){
       button.fadeOut("2000");
     }
-
   });
+  if($(window).width() < 750 ){
+    button.hide()
+  }
 });
 
 
@@ -354,6 +356,7 @@ speed: 800,
 
 
 
+
 new Swiper(".partners-projects__swiper-container", {
   speed: 800,
   slidesPerView: 3,
@@ -453,7 +456,16 @@ new Swiper(".publications-book", {
   observeSlideChildren:true,
 });
 
+new Swiper(".events__article-list_mobile", {
+  slidesPerGroup:1,
+  slidesPerView: 1,
+  spaceBetween: 20,
 
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
 
 // Свипер для вкладки hero
 
@@ -489,3 +501,4 @@ const element = document.querySelector('.gallery-menu__select');
         shouldSort: false,
       });
   });
+
