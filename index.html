@@ -123,7 +123,8 @@
                       </svg>
                   </button>
                   <div  class="hidden-menu__list list-1" data-targets="one">
-                    <ul class="hidden-menu__container" data-simplebar>
+                    <div class="hidden-menu__container" data-simplebar>
+                      <ul class="hidden-menu__wrapper">
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg1.png); background-size: cover">Тинторетто</li>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg2.png); background-size: cover">Фридрих</li>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg3.png); background-size: cover" >Леонардо</li>
@@ -141,6 +142,7 @@
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg3.png); background-size: cover" >Леонардо</li>
                       <li class="hidden-menu__items" tabindex="0" style = " background-image : url(img/img_desktop/hide-menu_bg4.png); background-size:cover">Верроккьо</li>
                     </ul>
+                    </div>
                   </div>
                 </li>
                 <li class="genrel-menu__items">
@@ -2474,12 +2476,17 @@
       </section>
 
       <section class="contacts">
-        <div class="container"><h2 class="contacts__title">Контакты</h2></div>
+        <div class="container"><h2 class="contacts__title">Контакты</h2>
+          <div class="adress-contacts adress-contacts_mobile">
+            <h3 class="adress-contacts__title">Шоурум №2</h3>
+            <address class="adress-contacts__subtitle">Леонтьевский переулок, дом 5/1</address>
+          </div>
+        </div>
         <div class="contacts__flex-sections">
         <div class="contacts__border">
         <div class="container ">
             <div class="contacts__information">
-              <div class="adress-contacts">
+              <div class="adress-contacts adress-contacts_desctop">
                 <h3 class="adress-contacts__title">Шоурум №4</h3>
                 <address class="adress-contacts__subtitle">Леонтьевский переулок, дом 5, строение 1</address>
               </div>
@@ -2547,6 +2554,7 @@
               });
 
               myMap.geoObjects.add(myObj);
+              myMap.behaviors.disable('scrollZoom');
             }
       </script>
 
