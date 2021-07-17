@@ -2335,7 +2335,7 @@ margin-right: 173px;
 .editions__items:not(:last-child){
   margin-bottom: 14px;
 }
-..editions__inputs_active{
+.editions__inputs_active{
     display: block;
 }
 .editions__inputs{
@@ -2720,11 +2720,9 @@ background: var(--DarkFiol);
     right: 4px;
     top:8px;
   }
-  }
+  
 
-  .editions__list_active{
-    display: block;
-  }
+ 
   .editions__books{
     display: none;
   }
