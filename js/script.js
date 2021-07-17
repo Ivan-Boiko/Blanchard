@@ -215,6 +215,8 @@ let painterColorСhanges = () => {
 painterColorСhanges ();
 
 
+
+
 $(document).ready(function(){
   if($(window).width() > 980){
     var numToShow = 3;
@@ -222,7 +224,9 @@ $(document).ready(function(){
   if($(window).width() < 1025){
     var numToShow = 2;
   }
-
+  if($(window).width() < 768 ){
+    var numToShow = 6;
+  }
 
   var list = $(".events__article-list li");
   var button = $(".events__btn");
@@ -244,9 +248,28 @@ if (numInList > numToShow){
       button.fadeOut("2000");
     }
   });
-  if($(window).width() < 750 ){
-    button.hide()
-  }
+
+
+
+  var editionButton = $(".editions__btn-mobile");
+  $(".editions__inputs:not(:checked)").parent().parent().hide(400);
+  $(".editions__inputs:checked").parent().parent().addClass('.editions__inputs_active');
+
+  $(".editions__btn-mobile").on("click", function() {
+    $(".editions__btn-mobile").toggleClass("editions__btn-mobile_active");
+    showList();
+  });
+
+   function showList(){
+    if(editionButton.hasClass("editions__btn-mobile_active")){
+       $(".editions__inputs:not(:checked)").parent().parent().show(400);
+       $(".editions__inputs").parent().parent().removeClass('.editions__inputs_active');
+    }
+    else{
+        $(".editions__inputs:not(:checked)").parent().parent().hide(400);
+        $(".editions__inputs:checked").parent().parent().addClass('.editions__inputs_active');
+    }
+    }
 });
 
 
