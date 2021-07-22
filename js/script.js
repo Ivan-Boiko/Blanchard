@@ -9,6 +9,14 @@ window.addEventListener('DOMContentLoaded', function(){
         document.querySelector(`[data-targets="${href}"]`).classList.add('hidden-menu--active');
     });
   })
+  document.querySelectorAll(".hidden-menu__btn-close").forEach(function(btnClose){
+    btnClose.addEventListener('click', function(){
+        document.querySelectorAll('.hidden-menu__list').forEach(function(tabContents){
+            tabContents.classList.remove('hidden-menu--active')
+            console.log("ada")
+          })
+    })
+})
   };
 
   showMenu();
@@ -218,13 +226,14 @@ painterColorСhanges ();
 
 
 $(document).ready(function(){
-  if($(window).width() > 980){
+  if($(window).width() > 1025){
     var numToShow = 3;
   }
-  if($(window).width() < 1025){
+
+  if($(window).width() < 1023 ){
     var numToShow = 2;
   }
-  if($(window).width() < 768 ){
+  if($(window).width() < 500 ){
     var numToShow = 6;
   }
 
@@ -233,11 +242,9 @@ $(document).ready(function(){
   var numInList = list.length;
   list.hide();
 if (numInList > numToShow){
-    button.show(100);
+    button.show();
   }
-  if (numInList <= numToShow){
-    button.hide(100);
-  }
+
   list.slice(0, numToShow).show();
 
   button.click(function(){
@@ -245,12 +252,17 @@ if (numInList > numToShow){
     list.slice(showing - 1, showing + numToShow).fadeIn();
     var nowShowing = list.filter(':visible').length;
     if(nowShowing >= numInList){
-      button.fadeOut("2000");
+      button.hide();
     }
+    
   });
+  if($(window).width() < 530 ) {
+    button.hide();
+}
+ 
 
   if($(window).width() < 470){
-      
+
     var editionButton = $(".editions__btn-mobile");
     $(".editions__inputs:not(:checked)").parent().parent().hide(400);
     $(".editions__inputs:checked").parent().parent().addClass('.editions__inputs_active');
@@ -446,12 +458,12 @@ new Swiper(".publications-book", {
     type: 'fraction'
   },
   breakpoints: {
-    320:{
-
-    },
+ 
     480:{
-      slidesPerGroup:1,
-      slidesPerView: 1,
+      slidesPerGroup:2,
+      slidesPerView: 2,
+      slidesPerColumn:1,
+      spaceBetween: 30,
     },
     768:{
       slidesPerGroup:2,
@@ -484,11 +496,12 @@ new Swiper(".publications-book", {
 new Swiper(".events__article-list_mobile", {
   slidesPerGroup:1,
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 10,
 
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    clickable: 'true',
   },
 });
 
