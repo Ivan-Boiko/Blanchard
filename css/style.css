@@ -355,7 +355,7 @@ transition: color 0.2s ease-in;
   padding-top: 10px;
   padding-left: 20px;
   transition: border 0.2s ease-in;
-  border: none;
+  border: 2px solid rgba(0, 0, 0, 0);
   outline: none;
 }
 
@@ -376,10 +376,10 @@ margin-bottom: 20px;
   opacity: 0.5;
 }
 .hidden-menu__hrefs:focus{
-  border: 1px solid var(--DarkFiol);
+  border: 2px solid var(--DarkFiol);
 }
 .hidden-menu__hrefs:hover{
-  border: 1px solid var(--DarkFiol);
+  border: 2px solid var(--DarkFiol);
   transition: border 0.2s ease-in;
 }
 
