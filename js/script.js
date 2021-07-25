@@ -226,7 +226,9 @@ painterColorСhanges ();
 
 
 $(document).ready(function(){
-  if($(window).width() > 1025){
+    var numToShow = 3;
+
+  if($(window).width() > 1023){
     var numToShow = 3;
   }
 
@@ -261,7 +263,7 @@ if (numInList > numToShow){
 }
  
 
-  if($(window).width() < 470){
+  if($(window).width() < 480){
 
     var editionButton = $(".editions__btn-mobile");
     $(".editions__inputs:not(:checked)").parent().parent().hide(400);
@@ -354,10 +356,10 @@ speed: 800,
       slidesPerGroup:1,
       slidesPerView: 1,
     },
-    450:{
+    490:{
       slidesPerColumn:2,
       slidesPerGroup:1,
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     768:{
@@ -463,7 +465,7 @@ new Swiper(".publications-book", {
       slidesPerGroup:2,
       slidesPerView: 2,
       slidesPerColumn:1,
-      spaceBetween: 30,
+      spaceBetween: 21,
     },
     768:{
       slidesPerGroup:2,
