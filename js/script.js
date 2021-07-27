@@ -258,7 +258,7 @@ if (numInList > numToShow){
     }
     
   });
-  if($(window).width() < 530 ) {
+  if($(window).width() < 531 ) {
     button.hide();
 }
  
