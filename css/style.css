@@ -2524,6 +2524,9 @@ background: var(--DarkFiol);
 .publication-book__list-mobile{
   display: none;
 }
+.editions__items svg{
+    display: none;
+}
 
 @media (max-width:1650px){
   .editions__flex{
@@ -2670,7 +2673,9 @@ background: var(--DarkFiol);
   .editions__items:not(:last-child){
       margin-bottom: 10px;
   }
-
+  .editions__items svg{
+    display: inline-block;
+}
   .publications-book__swiper-slide{
     max-height: 100%;
     max-width: 300px;
