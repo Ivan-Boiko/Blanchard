@@ -13,12 +13,11 @@ window.addEventListener('DOMContentLoaded', function(){
     btnClose.addEventListener('click', function(){
         document.querySelectorAll('.hidden-menu__list').forEach(function(tabContents){
             tabContents.classList.remove('hidden-menu--active')
-            console.log("ada")
+
           })
     })
 })
   };
-
   showMenu();
 
   let showBurger = () =>{
@@ -67,11 +66,11 @@ window.addEventListener('DOMContentLoaded', function(){
       document.querySelector('.header_burger-form-table').style.width = '';
     })
   }
-
   tableBurgerClosed ();
 
-  let mobileBurgerActive = () =>{
-    document.querySelector('.header__search-btn-mobile').addEventListener('click', function() {
+
+let mobileBurgerActive = () =>{
+     document.querySelector('.header__search-btn-mobile').addEventListener('click', function() {
       document.querySelector('.header_burger-form-mobile').classList.add('search_active');
       document.querySelector('.header__search-btn-mobile').classList.add('display_none');
     })
@@ -80,7 +79,7 @@ window.addEventListener('DOMContentLoaded', function(){
   mobileBurgerActive ();
 
   let mobileBurgerClose = () =>{
-    document.querySelector('.header__close-btn-mobile').addEventListener('click', function() {
+     document.querySelector('.header__close-btn-mobile').addEventListener('click', function() {
       document.querySelector('.header_burger-form-mobile').classList.remove('search_active');
       document.querySelector('.header__search-btn-mobile').classList.remove('display_none');
     })
@@ -88,9 +87,41 @@ window.addEventListener('DOMContentLoaded', function(){
 
   mobileBurgerClose ();
 
+let galleryModals = () => {
+    const btns = document.querySelectorAll(".gallery__slide-btn");
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modal = document.querySelectorAll('.modal')
+    const btnClose = document.querySelectorAll(".modal__btn-close")
+    btns.forEach( (el) => {
+        el.addEventListener('click', (e) => {
+            let path = e.currentTarget.getAttribute('data-path');
 
-  let subtitleChoices = () =>{
+            modal.forEach((el) => {
+                el.classList.remove("modal--visible")
+            })
 
+            document.querySelector(`[data-target="${path}"]`).classList.add("modal--visible");
+            modalOverlay.classList.add('modal-overlay--visible');
+        })
+    });
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target == modalOverlay){
+            modalOverlay.classList.remove("modal-overlay--visible")
+            modal.forEach((el) => {
+                el.classList.remove("modal--visible")
+            })
+        }
+    });
+    btnClose.forEach((el) => {
+        el.addEventListener('click', () => {
+            modalOverlay.classList.remove("modal-overlay--visible")
+        })
+    })
+}
+galleryModals();
+
+
+let subtitleChoices = () =>{
     document.querySelectorAll('.catalog__btn').forEach(function(tabsLang){
       tabsLang.addEventListener('click', function(event){
         const path = event.currentTarget.dataset.path;
@@ -101,11 +132,11 @@ window.addEventListener('DOMContentLoaded', function(){
       })
     });
   }
-  subtitleChoices();
+
+subtitleChoices();
 
 
 let accordionChoices = () => {
-
   document.querySelectorAll('.catalog__btn').forEach(function(tabsLang){
     tabsLang.addEventListener('click', function(event){
       const path = event.currentTarget.dataset.path;
@@ -165,11 +196,13 @@ let accordionChoices = () => {
 }
 accordionChoices ();
 
+
+
 let accordionChoicesAnimation = () =>{
   document.querySelectorAll('.catalog__btn').forEach(function(tabsLang){
     tabsLang.addEventListener('click', function(){
       gsap.from(".catalog__subtitle", {duration: 1, opacity: 0});
-      gsap.from(".catalog-painter", {duration: 1, y:100 , opacity: 0});
+      gsap.from(".catalog-painter", {duration: 1, y:100, opacity: 0});
     })
   });
   document.querySelectorAll('.accordion__persons').forEach(function(tabsLang){
@@ -180,6 +213,8 @@ let accordionChoicesAnimation = () =>{
   });
 };
 accordionChoicesAnimation ();
+
+
 
 let painterChoices = () => {
 
@@ -209,6 +244,7 @@ let countryBackgroundСhanges = () => {
 }
 countryBackgroundСhanges ();
 
+
 let painterColorСhanges = () => {
   document.querySelectorAll('.accordion__persons').forEach(function(tabsAcardion){
     tabsAcardion.addEventListener('click', function(event){
@@ -222,9 +258,26 @@ let painterColorСhanges = () => {
 }
 painterColorСhanges ();
 
+let scrollGalleryMobile = () => {
+    if($(window).width() < 1000){  
+       const btn = document.querySelectorAll('.accordion__persons');
+       function scrollElem (element){
+                $('html').animate({scrollTop: element.offset().top}, 500); 
+        }
+        $(document).ready(function(){
+            $(btn).each(function(){
+                $(this).on('click', function(){
+                    scrollElem($(".catalog-painter__container"))
+                    console.log($(this).text())
+                })
+            })
+        })
+          }
+}
 
+scrollGalleryMobile();
 
-
+    
 $(document).ready(function(){
     var numToShow = 3;
 

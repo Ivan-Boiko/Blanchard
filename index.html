@@ -25,13 +25,13 @@
     <header class="header">
       <div class="burger-menu">
         <ul class="burger-menu__list">
-          <li class="burger-menu__items"><button  class="burger-menu__href">О нас</button></li>
-          <li class="burger-menu__items"><button  class="burger-menu__href">Галерея</button></li>
-          <li class="burger-menu__items"><button  class="burger-menu__href">Каталог</button></li>
-          <li class="burger-menu__items"><button  class="burger-menu__href">События</button></li>
-          <li class="burger-menu__items"><button  class="burger-menu__href">Издания</button></li>
-          <li class="burger-menu__items"><button  class="burger-menu__href">Проекты</button></li>
-          <li class="burger-menu__items"><button  class="burger-menu__href">Контакты</button></li>
+          <li class="burger-menu__items"><a href="#about-us" class="burger-menu__href">О нас</a></li>
+          <li class="burger-menu__items"><a href="#gallery" class="burger-menu__href">Галерея</a></li>
+          <li class="burger-menu__items"><a href="#catalog" class="burger-menu__href">Каталог</a></li>
+          <li class="burger-menu__items"><a href="#events" class="burger-menu__href">События</a></li>
+          <li class="burger-menu__items"><a href="#editions" class="burger-menu__href">Издания</a></li>
+          <li class="burger-menu__items"><a href="#project" class="burger-menu__href">Проекты</a></li>
+          <li class="burger-menu__items"><a href="#contacts" class="burger-menu__href">Контакты</a></li>
 
         </ul>
       </div>
@@ -48,25 +48,25 @@
             <nav class="main-menu">
               <ul class="main-menu__list">
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">О нас</a>
+                  <a href="#about-us" class="main-menu__hrefs">О нас</a>
                 </li>
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">Галерея</a>
+                  <a href="#gallery" class="main-menu__hrefs">Галерея</a>
                 </li>
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">Каталог</a>
+                  <a href="#catalog" class="main-menu__hrefs">Каталог</a>
                 </li>
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">События</a>
+                  <a href="#events" class="main-menu__hrefs">События</a>
                 </li>
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">Издания</a>
+                  <a href="#editions" class="main-menu__hrefs">Издания</a>
                 </li>
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">Проекты</a>
+                  <a href="#project" class="main-menu__hrefs">Проекты</a>
                 </li>
                 <li class="main-menu__items">
-                  <a href="#" class="main-menu__hrefs">Контакты</a>
+                  <a href="#contacts" class="main-menu__hrefs">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -477,7 +477,7 @@
         </div>
       </section>
 
-      <section class="about-us">
+      <section class="about-us" id="about-us">
         <div class="container about-us__container">
           <h2 class="about-us__title">О нас</h2>
           <p class="about-us__subtitle">
@@ -486,7 +486,525 @@
         </div>
       </section>
 
-      <section class="gallery" >
+      <section class="gallery" id ="gallery">
+          <div class="modals">
+              <div class="modal-overlay">
+                  <div class="modal modal--1" data-target ="picture1">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo1.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Карл Брюллов</h2>
+                              <p class="modal__subtitle">"Италья́нский по́лдень"</p>
+                              <div class="modal__date">1827 г.</div>
+                              <div class="modal__description">Парная к «Полдню» картина «Итальянское утро» написана в 1823 году и была подарена Обществом поощрения художников Александре Фёдоровне, жене Николая I. Император захотел получить парную к «Утру» картину, что послужило началом написания Брюлловым картины «Итальянский полдень». «Полдень» был написан в 1827 году и стал причиной разрыва художника с Обществом поощрения художников. Картина появилась на выставке в Петербурге и получила много нелестных отзывов. Критики посчитали, что модель не изящна и не соответствует «классическим идеалам» красоты. Отзыв на картину в письме к художнику был таким</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--2" data-target ="picture2">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo2.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Жан Оноре Фрагонар</h2>
+                              <p class="modal__subtitle">"Игра в жмурки"</p>
+                              <div class="modal__date">1775 г.–1780 г.</div>
+                              <div class="modal__description">картина французского художника-рококо Жана-Оноре Фрагонара, написанная примерно в 1750 году на холсте маслом. Он находится в Музее искусств Толедо в Толедо, штат Огайо, США, который приобрел его за средства Фонда Либби, подарка производителя стекла Эдварда Либби, основавшего музей в 1901 году.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--3" data-target ="picture3">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo3.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Питер Пауль Рубенс</h2>
+                              <p class="modal__subtitle">"Самсо́н и Дали́ла"</p>
+                              <div class="modal__date">1609</div>
+                              <div class="modal__description">На картине запечатлён библейский эпизод, в котором Самсон засыпает на коленях у Далилы. Подвиги Самсона описаны в библейской Книге Судей (гл. 13-16). Он происходил из колена Дана, наиболее страдавшего от порабощения филистимлян. Самсон вырос среди рабского унижения своего народа и решил отомстить поработителям, чего и достиг, совершив множество избиений филистимлян. Будучи посвящёным Богу в качестве назорея, он носил длинные волосы, служившие источником его необычайного могущества. Самсон поддался страсти к коварной филистимлянке Далиле (в русской традиции Далида), обещавшей филистимлянским правителям за вознаграждение выведать, в чём сила Самсона. После трёх неудачных попыток ей удалось узнать секрет его силы. «И усыпила его [Далида] на коленях своих, и призвала человека, и велела ему остричь семь кос головы его. И начал он ослабевать, и отступила от него сила его.» (Суд. 16:19) Утративший свою силу Самсон был захвачен филистимлянами, ослеплён, закован в цепи и брошен в темницу.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--4" data-target ="picture4">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo4.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Ян ван Хёйсум</h2>
+                              <p class="modal__subtitle">"Плоды и цветы"</p>
+                              <div class="modal__date">1723</div>
+                              <div class="modal__description">Особенности художественной манеры Яна ван Хёйсума хорошо видны в двух парных картинах «Цветы» (1722) и «Цветы и плоды» (1723), выполненных по заказу лорда Уолпола и находящихся в Эрмитаже. «В своих выдержанных в светлых тонах букетах он достигает большой силы красочных звучаний. Особенно характерна в этом отношении картина «Цветы и плоды» (1723), где наряду со светлой гаммой цветов, определяющей колорит, в нагромождении фруктов внизу и изысканном узоре изгибающихся лоз вверху чувствуется тонкий художественный расчет мастера позднего натюрморта. Тщательность выполнения и светлый красочный аккорд картин Хейсума, который, подобно Яну Давидсу де Хему, использовал все возможности передачи букетов в светлом окружении, изменил самый характер натюрморта.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--5" data-target ="picture5">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo5.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Иван Крамской</h2>
+                              <p class="modal__subtitle">"Неизвестная"</p>
+                              <div class="modal__date">1883</div>
+                              <div class="modal__description">На полотне изображена молодая женщина, проезжающая в открытом экипаже по Невскому проспекту у павильонов Аничкова дворца. Справа за её спиной виднеется Александринский театр. Она одета по последней моде 1880-х годов. На ней бархатная шляпка с перьями, украшенное мехом и лентами пальто, муфта и тонкие кожаные перчатки. Взгляд царственный, таинственный и немного грустный.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--6" data-target ="picture6">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo6.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Семирадский, Генрих Ипполитович</h2>
+                              <p class="modal__subtitle">"Игра в кости"</p>
+                              <div class="modal__date">1889</div>
+                              <div class="modal__description">На картине изображена жанровая сценка из жизни античной эпохи. Четыре прекрасные молодые женщины уединились в тени деревьев для приятного времяпровождения – повседневная сценка. Детали картины создают атмосферу отдыха и безмятежности - греческие кувшины, наполненные вином, и кусты, усыпанные цветами. В центре композиции — лежащие или полулежащие девушки, что собрались за игрой в кости.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--7" data-target ="picture7">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo7.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Лоррен, Клод</h2>
+                              <p class="modal__subtitle">"Отплытие царицы Савской"</p>
+                              <div class="modal__date">1648</div>
+                              <div class="modal__description"> Люди на переднем плане картины трудятся над погрузкой парусного судна «Царица Савская». Немногочисленные высокопоставленные пассажиры парусника, в сопровождении свиты вышли на набережную для отплытия. Величественные архитектурные здания в римском стиле безупречно вписаны мастером в пейзаж и тем усиливают его нереальную красоту. Здесь всё воздушно и прекрасно, всё гармонично и всё на своих местах: каждый мазок кисти, каждая лессировка (прозрачный слой краски). Перед нами, без сомнения, лучший пейзаж Лоррена.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--8" data-target ="picture8">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo8.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Сезанн, Поль</h2>
+                              <p class="modal__subtitle">"Купальщицы"</p>
+                              <div class="modal__date">1906</div>
+                              <div class="modal__description">картина Поля Сезанна, впервые выставленная в 1906 году. Является крупнейшей в серии «Купальщиц» художника, что отражено в её названии. Прочие работы серии хранятся в Нью-Йоркском музее современного искусства, Лондонской национальной галерее, Фонде Барнса в Филадельфии и Чикагском институте искусств. Картина считается шедевром модернизма и одной из лучших работ Сезанна</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--9" data-target ="picture9">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo9.png"  alt="Картина" class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Клод Жозе́ф Верне́</h2>
+                              <p class="modal__subtitle">"A River with Fishermen"</p>
+                              <div class="modal__date">1879</div>
+                              <div class="modal__description">Его большие холсты приобретали коллекционеры для украшения своих дворцов по всей Европе, в настоящее время они находятся во многих крупных европейских музеях. Одна из крупнейших коллекций — в Государственном Эрмитаже в Санкт-Петербурге. С рисунков К. Ж. Верне делали гравюры.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--10" data-target ="picture10">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo10.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Питер Брейгель Старший</h2>
+                              <p class="modal__subtitle">"Падение Икара"</p>
+                              <div class="modal__date">1558</div>
+                              <div class="modal__description">Сюжет картины заимствован из греческой мифологии. Минос, царь острова Крит, держал в плену талантливого изобретателя Дедала и его сына Икара[2]. Чтобы покинуть остров, Дедал решил сделать для себя и для сына крылья и перелететь через море. Перед полётом он предупредил сына, чтобы тот не поднимался слишком высоко: перья, из которых Дедал смастерил крылья, были скреплены воском и солнечный жар мог растопить его. Однако Икар ослушался отца и взлетел к самому солнцу. Воск растаял; Икар упал в море и утонул. </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--11" data-target ="picture11">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo11.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Константин Егорович Маковский</h2>
+                              <p class="modal__subtitle">"Счастливая Аркадия"</p>
+                              <div class="modal__date">1890</div>
+                              <div class="modal__description">Картина дважды продавалась вместе с домом в качестве интерьера, в 2007 была определена ее подленность, в последствии картину выставили на торги за 650 тыс Евро</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--12" data-target ="picture12">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo12.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Сандро Боттичелли</h2>
+                              <p class="modal__subtitle">"Весна"</p>
+                              <div class="modal__date">1482</div>
+                              <div class="modal__description">ак выяснилось в 1975 году из обнаруженной описи 1498 года, картина находилась в спальных покоях Лоренцо ди Пьерфранческо Медичи, которого после смерти отца взял под своё покровительство его дядя Лоренцо Великолепный. Картина висела над софой, называемой летуччо. В той же комнате находились ещё две картины: «Паллада и кентавр» (1482—1483) Боттичелли и «Мадонна с Младенцем» неизвестного автора. Учитывая то обстоятельство, что 19 июля 1482 года дядя женил по политическим соображениям 17-летнего Лоренцо ди Пьерфранческо на Семирамиде, представительнице знатной фамилии Аппиани, исследователи полагают, что картина была заказана Лоренцо Великолепным Боттичелли в качестве свадебного подарка племяннику. Такие подарки были в то время обычным явлением[1]. В таком случае Боттичелли знал, где будет висеть картина, и то, что она будет располагаться на высоте двух метров от пола.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--13" data-target ="picture13">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo13.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">МАЛЕВИЧ Казимир Северинович</h2>
+                              <p class="modal__subtitle">"Торс (Фигура с розовым лицом)"</p>
+                              <div class="modal__date">1928–1929</div>
+                              <div class="modal__description">Эти странные безликие "полуобразы" (так называл подобные работы сам художник), зашифрованные в женских фигурах и торсах, существуют по мысли К.Малевича, в параллельном мире, в пределах вымышленного художником Космоса, в пространстве без времени. Произведение вызывает ассоциации и с пластикой архаической скульптуры, и с деревянной игрушкой, и с модернистским манекеном. Присутствие в фигуре белого цвета, дающего реальное представление о бесконечности, говорит о том, что в данном случае бесконечность заключена в самом человеке, который и становится для Малевича средоточием некоего абсолюта.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--14" data-target ="picture14">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo14.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Женщина с граблями"</p>
+                              <div class="modal__date">1931-1932</div>
+                              <div class="modal__description">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--15" data-target ="picture15">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo15.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Уборка ржи"</p>
+                              <div class="modal__date">1911 г.</div>
+                              <div class="modal__description">«Уборка ржи» — это образчик российского кубофутуризма, взявшего начало у французских мастеров. Работа относится к крестьянской серии картин, запечатлевшей рутинный уклад сельской жизни. В этот период у Малевича произошел перелом в направлении художественного стиля.
+
+                                Сюжет картины довольно прост: крестьяне убирают сено. Фигуры людей лишены сложных деталей и нарочно изображены укрупненными. Они будто состоят из гнутых листов железа, жесткий материал отливает на свету металлическим отблеском. Несмотря на то, что тела написаны довольно просто и схематично, легко определить, где мужчина и женщина.
+                                
+                                https://opisanie-kartin.com/opisanie-kartiny-kazimira-malevicha-uborka-rzhi/</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--16" data-target ="picture16">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo16.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Супрематизм"</p>
+                              <div class="modal__date">1915</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--17" data-target ="picture17">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo17.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Женщина с ведрами"</p>
+                              <div class="modal__date">1912</div>
+                              <div class="modal__description">"Женщина с вёдрами" Казимира Малевича — яркое произведение авангардного искусства, написанное в 1912 году. Ныне картина хранится в коллекции нью-йоркского Музея современного искусства. Стиль, известный как русский авангард характерен для искусства Российской Империи, а затем и Советского Союза в период с 1890 по 1930 год. В это время внутри авангардного движения создавалось множество подстилей, имеющих свои уникальные отличительные черты. Одним из таких подстилей и стал супрематизм — движение, основанное Казимиром Малевичем и характерное для всей его живописи, в том числе и для «Женщины с ведрами».</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--18" data-target ="picture18">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo18.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Супрематизм"</p>
+                              <div class="modal__date">1915</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--19" data-target ="picture19">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo19.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Крестьянин в поле"</p>
+                              <div class="modal__date">1930</div>
+                              <div class="modal__description">История портретного жанра в искусстве давняя и многообразная*. На визуальном уровне портрет претерпел явные изменения в XX веке, на котором мне бы и хотелось остановиться в контексте крестьянских портретов Казимира Малевича.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--20" data-target ="picture20">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo20.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Два крестьянина на фоне полей"</p>
+                              <div class="modal__date">1930</div>
+                              <div class="modal__description">История портретного жанра в искусстве давняя и многообразная*. На визуальном уровне портрет претерпел явные изменения в XX веке, на котором мне бы и хотелось остановиться в контексте крестьянских портретов Казимира Малевича.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--21" data-target ="picture21">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo21.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Супрематизм"</p>
+                              <div class="modal__date">1915</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--22" data-target ="picture22">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo22.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Крестьянин в поле"</p>
+                              <div class="modal__date">1930</div>
+                              <div class="modal__description">История портретного жанра в искусстве давняя и многообразная*. На визуальном уровне портрет претерпел явные изменения в XX веке, на котором мне бы и хотелось остановиться в контексте крестьянских портретов Казимира Малевича.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--23" data-target ="picture23">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo23.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"ЖЕЛТОЕ И ЧЕРНОЕ"</p>
+                              <div class="modal__date">1915</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--24" data-target ="picture24">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo24.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Девушки в поле"</p>
+                              <div class="modal__date">1912</div>
+                              <div class="modal__description">На подрамнике картины, исполненной Малевичем в 1928–29-х годах, помещена весьма красноречивая авторская надпись: «Девушки в поле» 1912 г. № 26 «Супранатурализм». Художник изобрел новый термин. Объединив два понятия, «супрематизм» и «натурализм» он определил тем самым своеобразие пластического языка своих работ, построенных на слиянии геометрического, абстрактного и фигуративного начала. Дата же, «1912 год», откидывала возникновение «супранатурализма» в прошлое, делала его истоком, предтечей супрематизма.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--25" data-target ="picture25">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo25.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Женщина с граблями"</p>
+                              <div class="modal__date">1931-1932</div>
+                              <div class="modal__description">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--26" data-target ="picture26">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo26.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Супрематизм"</p>
+                              <div class="modal__date">1915</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--27" data-target ="picture27">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo27.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Спортсмены"</p>
+                              <div class="modal__date">1928–1932</div>
+                              <div class="modal__description">Возвратившись в 1927 году из своей первой и последней европейской поездки, Казимир Малевич пытается проанализировать свою роль в современной ему истории изобразительного искусства, прежде всего, живописи, и совершает беспрецедентный акт реконструкции собственного творческого пути в соответствии с теми теоретическими взглядами, которые исповедует в это время. Такое переосмысление художником в конце жизни всего своего творчества с позиций зрелого мастера, теоретика и педагога; создание им новой эволюции, новой теоретически выверенной хронологии, стремление как бы пройти свой жизненный путь вспять, переписать его «набело» – это феномен, не имеющий аналогов в истории искусства XX века.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--28" data-target ="picture28">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo28.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Бюро и комната"</p>
+                              <div class="modal__date">1913</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--29" data-target ="picture29">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo29.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"Зимний пейзаж"</p>
+                              <div class="modal__date">1930</div>
+                              <div class="modal__description">Итоговая стоимость, заплаченная за произведение Клюна, который был близким другом Казимира Малевича (1879-1935), превысила изначальную оценку лота, составлявшую £2,5-3,5 млн ($3,2-4,5 млн). Ранее картина находилась в собрании известного коллекционера работ русских авангардистов - родившегося и много десятилетий прожившего в СССР грека Георгия Костаки. В 60-х годах он приобрел целый ряд произведений художника у его дочери Серафимы. "Сферический супрематизм" - одна из немногих картин, которые ему удалось вывезти из СССР в 1977 году, на ее оборотной стороне проставлен штемпель об экспорте из Советского Союза.</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal modal--30" data-target ="picture30">
+                      <div class="modal__container">
+                          <button class="modal__btn-close">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z" fill="black"/>
+                            </svg>
+                          </button>
+                              <img src="img/img_desktop/galery-photo30.png" alt="Картина"  class="modal__picture">
+                          <div class="modal__content">
+                              <h2 class="modal__title ">Казимир Малевич</h2>
+                              <p class="modal__subtitle">"На жатву (Марфа и Ванька)"</p>
+                              <div class="modal__date">1928-1929 гг.</div>
+                              <div class="modal__description">Две фигуры обращены к зрителю спиной. Центральное место занимает женщина Марфа, идущая на жатву. Её формы исполнены в той же манере, что и фигура Ваньки, только она намного больше его пропорционально. Обе фигуры одинаково окрашены, имеют одинаковую посадку головы — она втянута в плечи. Таким же образом вывернуты стопы, обутые в лапти. На заднем плане изображены люди, занятые уборкой сена.</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         <div class="container gallery__section-flex">
           <div class="gallery__left-section">
             <div class="gallery-menu">
@@ -526,136 +1044,154 @@
                 <div class="gallery__swiper-container swiper-container ">
                   <div class="swiper-wrapper gallery__swiper-wrapper">
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture1"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo1.png" alt="photo1">
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture2"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo2.png" alt="photo2">
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture3"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo3.png" alt="photo3">
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture4"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo4.png" alt="photo4">
-
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture5"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo5.png" alt="photo5">
-
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture6"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo6.png" alt="photo6">
-
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture7"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo7.png" alt="photo7">
-
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture8"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo8.png" alt="photo8">
-
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture9"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo9.png" alt="photo9">
-
+ 
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture10"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo10.png" alt="photo10">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture11"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo11.png" alt="photo11">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture12"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo12.png" alt="photo12">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture13"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo13.png" alt="photo13">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture14"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo14.png" alt="photo14">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture15"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo15.png" alt="photo15">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture16"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo16.png" alt="photo16">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture17"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo17.png" alt="photo17">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture18"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo18.png" alt="photo18">
-
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture19"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo19.png" alt="photo19">
-
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture20"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo20.png" alt="photo20">
-
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture21"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo21.png" alt="photo21">
-
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture22"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo22.png" alt="photo22">
-
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture23"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo23.png" alt="photo23">
-
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture24"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo24.png" alt="photo24">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture25"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo25.png" alt="photo25">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture26"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo26.png" alt="photo26">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture27"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo27.png" alt="photo27">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture28"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo28.png" alt="photo28">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture29"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo29.png" alt="photo29">
+                      
                     </div>
                     <div class="gallery__swiper-slide swiper-slide">
-                      <button class="gallery__slide-btn" aria-label="Увеличить фото"></button>
+                      <button class="gallery__slide-btn" aria-label="Увеличить фото" data-path ="picture30"></button>
                       <img class ="gallery__img" src="img/img_desktop/galery-photo30.png" alt="photo30">
+                      
                     </div>
                   </div>
                 </div>
@@ -668,7 +1204,7 @@
         </div>
       </section>
 
-      <section class="catalog" >
+      <section class="catalog" id="catalog">
         <div class="container catalog__container">
           <div class="catalog__language">
           <h2 class="catalog__title">Каталог</h2>
@@ -2177,7 +2713,7 @@
         </div>
       </section>
 
-      <section class="events">
+      <section class="events" id="events">
         <div class="container events__container">
           <h2 class="events__title">События</h2>
           <ul class="events__article-list">
@@ -2322,7 +2858,7 @@
           </div>
       </section>
 
-      <section class="editions">
+      <section class="editions" id="editions">
         <div class="container  editions__flex">
           <div class="editions__category">
             <h2 class="editions__title">Издания</h2>
@@ -2663,7 +3199,7 @@
         </div>
       </section>
 
-      <section class="project">
+      <section class="project" id="project">
         <div class="container project__container">
           <h2 class="project__title">Проекты</h2>
           <div class="project__description">
@@ -2766,7 +3302,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container contacts__container"><h2 class="contacts__title">Контакты</h2>
           <div class="adress-contacts adress-contacts_mobile">
             <h3 class="adress-contacts__title">Шоурум №2</h3>
@@ -2781,31 +3317,31 @@
                 <h3 class="adress-contacts__title">Шоурум №4</h3>
                 <address class="adress-contacts__subtitle">Леонтьевский переулок, дом 5, строение 1</address>
               </div>
-              <form action="#" class="callback-contacts"  novalidate="novalidate">
+              <form action="send.php" class="callback-contacts" method="POST"  novalidate="novalidate">
                 <h3 class="callback-contacts__title">Заказать обратный звонок</h3>
                 <input
-                  name="Имя"
+                  name="user_name"
                   class="callback-contacts__inputs"
                   type="text"
                   placeholder="Имя*"
                   data-validate-field="name"
                 />
                 <input
-                  name="tel"
+                  name="user_phone"
                   class="callback-contacts__inputs"
                   type="tel"
                   placeholder="Телефон*"
                   data-validate-field ="tel"
                   data-validate-rules = "phone"
                 />
-                <button class="callback-contacts__btn">Заказать</button>
+                <button type="submit" class="callback-contacts__btn">Заказать</button>
               </form>
               <div class="social-contact">
                 <h3 class="social-contact__title">
                   Связаться в один клик
                 </h3>
-                <a href="#" class="social-contact__hrefs social-contact_whatsapp" aria-label="Напишите нам в  whatsapp"></a>
-                <a href="#" class="social-contact__hrefs social-contact_telegram" aria-label="Напишите нам в  инстаграмм"></a>
+                <a href="https://www.whatsapp.com/" class="social-contact__hrefs social-contact_whatsapp" aria-label="Напишите нам в  whatsapp"></a>
+                <a href="https://telegram.org/" class="social-contact__hrefs social-contact_telegram" aria-label="Напишите нам в  инстаграмм"></a>
               </div>
             </div>
         </div>
@@ -2816,16 +3352,16 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id ="footer">
       <div class="container footer_flex">
         <img src="img/img_desktop/logo.png" alt="" class="footer__logo" />
         <div class="footer__social" aria-label="Мы в соц. сетях" aria-role ="ul">
-          <a href="#" class="fotter__social-hrefs" aria-label="Мы Вконтакте">
+          <a href="https://vk.com/" class="fotter__social-hrefs" aria-label="Мы Вконтакте">
             <svg class ="fotter__social-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="fotter_svg-bg" d="M22.6983 0C10.1628 0 0 10.1623 0 22.6983C0 35.2343 10.1628 45.3966 22.6983 45.3966C35.2338 45.3966 45.3966 35.2343 45.3966 22.6983C45.3966 10.1623 35.2338 0 22.6983 0ZM34.2121 25.1532C35.27 26.1865 36.3893 27.159 37.339 28.2991C37.7598 28.8035 38.1564 29.325 38.4582 29.9116C38.8892 30.748 38.5 31.6652 37.7514 31.7149L33.1012 31.714C31.9002 31.8134 30.9445 31.329 30.1387 30.5079C29.4955 29.8535 28.8987 29.1546 28.2792 28.4779C28.0261 28.2002 27.7595 27.9388 27.4418 27.733C26.8079 27.3206 26.2571 27.4469 25.8939 28.1092C25.5238 28.7831 25.4393 29.5298 25.404 30.2799C25.3534 31.3764 25.0227 31.6629 23.9225 31.7145C21.5716 31.8245 19.341 31.4679 17.2679 30.2827C15.439 29.2373 14.0235 27.7618 12.79 26.0913C10.388 22.8348 8.54849 19.2607 6.89564 15.5839C6.52364 14.7559 6.79579 14.3128 7.70929 14.2956C9.227 14.2664 10.7447 14.2701 12.2624 14.2942C12.8801 14.304 13.2888 14.6574 13.5261 15.2403C14.3463 17.2581 15.3517 19.178 16.6117 20.9586C16.9474 21.4328 17.2902 21.9055 17.7783 22.2404C18.317 22.6101 18.7275 22.4879 18.9816 21.8865C19.1441 21.5043 19.2143 21.0956 19.2495 20.686C19.3703 19.283 19.3847 17.8805 19.1757 16.483C19.0457 15.6085 18.5539 15.0438 17.6821 14.8785C17.2382 14.7944 17.3032 14.63 17.5191 14.3764C17.8939 13.938 18.245 13.6668 18.9468 13.6668L24.2007 13.6659C25.0287 13.8284 25.2145 14.2 25.3269 15.0341L25.3315 20.8727C25.3218 21.1954 25.4936 22.1521 26.0732 22.3635C26.5376 22.5167 26.8441 22.1442 27.1219 21.8503C28.3818 20.5132 29.2795 18.9351 30.0834 17.3018C30.4382 16.5815 30.7443 15.8361 31.0415 15.0893C31.2626 14.5371 31.6062 14.2654 32.2295 14.2747L37.2888 14.2808C37.4379 14.2808 37.5893 14.2822 37.737 14.3077C38.5897 14.4535 38.8233 14.8204 38.5595 15.6522C38.1443 16.9591 37.3376 18.0476 36.549 19.139C35.7038 20.3075 34.8024 21.4351 33.9655 22.6087C33.1964 23.6815 33.2572 24.2216 34.2121 25.1532Z" fill="#CACACA"/>
               </svg>
           </a>
-          <a href="#" class="fotter__social-hrefs" aria-label="Мы в instagram">
+          <a href="https://www.instagram.com/" class="fotter__social-hrefs" aria-label="Мы в instagram">
             <svg class ="fotter__social-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
               <path class="fotter_svg-bg" d="M18.7503 22.6981C18.7503 25.0976 20.6954 27.0427 23.0949 27.0427C25.4944 27.0427 27.4395 25.0976 27.4395 22.6981C27.4395 20.2986 25.4944 18.3535 23.0949 18.3535C20.6954 18.3535 18.7503 20.2986 18.7503 22.6981Z" fill="#CACACA"/>
@@ -2839,7 +3375,7 @@
               </defs>
               </svg>
           </a>
-          <a href="#" class="fotter__social-hrefs " aria-label="Мы в facebook">
+          <a href="https://www.facebook.com/" class="fotter__social-hrefs " aria-label="Мы в facebook">
             <svg class ="fotter__social-svg" width="47" height="46" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="fotter_svg-bg" d="M23.4915 0.0908203C11.0074 0.0908203 0.793213 10.3233 0.793213 22.9259C0.793213 34.3206 9.10078 43.7782 19.9506 45.4874V29.5348H14.1852V22.9259H19.9506V17.8894C19.9506 12.1692 23.3326 9.02429 28.5305 9.02429C31.0046 9.02429 33.5922 9.45729 33.5922 9.45729V15.0863H30.7322C27.9176 15.0863 27.0324 16.8411 27.0324 18.6414V22.9259H33.3425L32.3211 29.5348H27.0324V45.4874C32.3811 44.6393 37.2516 41.8993 40.7647 37.7619C44.2778 33.6246 46.2019 28.3626 46.1898 22.9259C46.1898 10.3233 35.9755 0.0908203 23.4915 0.0908203Z" fill="#CACACA"/>
               </svg>
