@@ -1713,6 +1713,9 @@ max-width: 670px;
   transition:  color 0.2s ease-in;
   position: relative;
 }
+.accordion__persons-color{
+    color: var(--DarkFiol)
+}
 .accordion__persons:not(:last-child){
   margin-bottom: 15px;
 }

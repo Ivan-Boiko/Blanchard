@@ -147,7 +147,7 @@ let accordionChoices = () => {
         tabContent.classList.remove('accordion_active')
       })
       document.querySelectorAll('.accordion__persons').forEach(function(tabContent){
-        tabContent.classList.remove('acardinon__persons-color')
+        tabContent.classList.remove('accordion__persons-color')
       })
       document.querySelectorAll('.catalog-painter__information').forEach(function(tabContent){
         tabContent.classList.remove('catalog-painter_active')
@@ -160,7 +160,7 @@ let accordionChoices = () => {
         firstElementGermany[0].classList.toggle('catalog-painter_active');
         let germanyBtn = document.getElementById('germany')
         let germanyBtnActive = germanyBtn.getElementsByClassName('accordion__persons')
-        germanyBtnActive[0].classList.add('acardinon__persons-color')
+        germanyBtnActive[0].classList.add('accordion__persons-color')
       }
       if (path === 'franch') {
         let franch = document.querySelector('.catalog-painter__franch');
@@ -168,7 +168,7 @@ let accordionChoices = () => {
         firstElementFranch[0].classList.toggle('catalog-painter_active');
         let franchBtn = document.getElementById('franch')
         let franchBtnActive = franchBtn.getElementsByClassName('accordion__persons')
-        franchBtnActive[0].classList.add('acardinon__persons-color')
+        franchBtnActive[0].classList.add('accordion__persons-color')
       }
       if (path === 'italian') {
         let italian = document.querySelector('.catalog-painter__italian');
@@ -176,7 +176,7 @@ let accordionChoices = () => {
         firstElementItalian[0].classList.toggle('catalog-painter_active');
         let italianBtn = document.getElementById('italian')
         let italianBtnActive = italianBtn.getElementsByClassName('accordion__persons')
-        italianBtnActive[0].classList.add('acardinon__persons-color')
+        italianBtnActive[0].classList.add('accordion__persons-color')
       }
       if (path === 'russia') {
         let russia = document.querySelector('.catalog-painter__russia');
@@ -184,7 +184,7 @@ let accordionChoices = () => {
         firstElementRussia[0].classList.toggle('catalog-painter_active');
         let russiaBtn = document.getElementById('russia')
         let russiaBtnActive = russiaBtn.getElementsByClassName('accordion__persons')
-        russiaBtnActive[0].classList.add('acardinon__persons-color')
+        russiaBtnActive[0].classList.add('accordion__persons-color')
       }
       if (path === 'belgium') {
         let belgium = document.querySelector('.catalog-painter__belgium');
@@ -192,7 +192,7 @@ let accordionChoices = () => {
         firstElementBelgium[0].classList.toggle('catalog-painter_active');
         let belgiumBtn = document.getElementById('belgium')
         let belgiumBtnActive = belgiumBtn.getElementsByClassName('accordion__persons')
-        belgiumBtnActive[0].classList.add('acardinon__persons-color')
+        belgiumBtnActive[0].classList.add('accordion__persons-color')
       }
     })
   });
@@ -253,9 +253,9 @@ let painterColorСhanges = () => {
     tabsAcardion.addEventListener('click', function(event){
     const path = event.currentTarget.dataset.path;
       document.querySelectorAll('.accordion__persons').forEach(function(tabContent){
-        tabContent.classList.remove('acardinon__persons-color')
+        tabContent.classList.remove('accordion__persons-color')
         })
-          document.querySelector(`[data-path="${path}"]`).classList.add('acardinon__persons-color')
+          document.querySelector(`[data-path="${path}"]`).classList.add('accordion__persons-color')
           })
     });
 }
