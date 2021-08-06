@@ -99,24 +99,27 @@ let galleryModals = () => {
             modal.forEach((el) => {
                 el.classList.remove("modal--visible")
             })
-
             document.querySelector(`[data-target="${path}"]`).classList.add("modal--visible");
             modalOverlay.classList.add('modal-overlay--visible');
+            document.getElementsByTagName('body')[0].style.overflow = "hidden"
         })
     });
     modalOverlay.addEventListener('click', (e) => {
-        if (e.target == modalOverlay){
+        if (e.target === modalOverlay){
             modalOverlay.classList.remove("modal-overlay--visible")
             modal.forEach((el) => {
                 el.classList.remove("modal--visible")
             })
         }
+        document.getElementsByTagName('body')[0].style.overflow = "auto"
     });
     btnClose.forEach((el) => {
         el.addEventListener('click', () => {
             modalOverlay.classList.remove("modal-overlay--visible")
+            document.getElementsByTagName('body')[0].style.overflow = "auto"
         })
     })
+
 }
 galleryModals();
 

@@ -1209,7 +1209,6 @@ transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     color: #FFFFFF;
     display: flex;
-
     position: relative;
 }
 
@@ -1418,11 +1417,14 @@ transition: fill 0.2s ease-in;
   .modal__container{
     flex-direction: column;
     align-items: center;
-    max-width: 450px;
+    max-width: 320px;
+    max-height: 700px;
   }
 
   .modal__picture{
-      padding-top: 20px;
+    max-width: 320px;
+    padding-top: 0;
+    min-height: 250px;
       margin-right: 0;
   }
   .modal__content{
@@ -1432,7 +1434,28 @@ transition: fill 0.2s ease-in;
     top:5px;
     right: 5px;
 }
-  
+.gallery__slide-btn{
+    width: 96%;
+    height: 96%;
+  }
+
+.modal__description{
+    overflow: scroll;
+}
+
+.modal__btn-close {
+    top: 15px;
+    right: 15px;
+}
+.modal__btn-close > svg {
+    width: 25px;
+    height: 25px;
+}
+.modal__btn-close > svg > path {
+    fill: white; 
+    transition: fill 0.3s ease-out;
+
+}
 }
 @media (max-width: 767px){
   .gallery__left-section{
@@ -1454,6 +1477,11 @@ transition: fill 0.2s ease-in;
    max-width: 280px;
    max-height:250px;   
   }
+  .gallery__slide-btn{
+    width: 93%;
+    height: 96%;
+  }
+
 }
 @media (max-width: 606px){
     .gallery__img {
@@ -1466,6 +1494,10 @@ transition: fill 0.2s ease-in;
     .gallery__swiper-slide{
         max-width: 200px;
     }
+    .gallery__slide-btn{
+        width: 100%;
+        height: 80%;
+      }
 }
 
 @media (max-width: 488px){
@@ -1497,6 +1529,10 @@ transition: fill 0.2s ease-in;
     padding-top: 0px;
     margin-bottom: 17px;
     padding-left: 0;
+  }
+  .gallery__slide-btn{
+    width: 102%;
+    height: 80%;
   }
   .gallery-menu__subtitle-table{
     order: 2;
@@ -1534,31 +1570,7 @@ transition: fill 0.2s ease-in;
     top: 2px;
     left: 2px;
   }
-  .modal__container {
-    max-width: 320px;
-    max-height: 700px;
-}
-.modal__description{
-overflow: scroll;
-}
-.modal__picture {
-    max-width: 320px;
-    padding-top: 0;
-    min-height: 250px;
-}
-.modal__btn-close {
-    top: 15px;
-    right: 15px;
-}
-.modal__btn-close > svg {
-    width: 25px;
-    height: 25px;
-}
-.modal__btn-close > svg > path {
-    fill: white; 
-    transition: fill 0.3s ease-out;
-
-}
+  
 }
 
 
