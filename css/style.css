@@ -1043,6 +1043,7 @@ line-height: 28px;
   margin-top: 22px;
   transform: rotate(180deg);
   right: 14px;
+  
 }
 .choices[data-type*='select-one'] .choices__inner{
 padding-bottom: 6.5px;
@@ -1050,6 +1051,7 @@ padding-bottom: 6.5px;
 .choices__list--dropdown {
   background-color: inherit;
   color: white;
+
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
@@ -1076,7 +1078,10 @@ border-bottom: none;
   padding-bottom: 12px;
   padding-left: 15px;
 }
-
+.gallery-menu__choices .is-open {
+    min-height: 20px;
+    margin-bottom: 50px;
+}
 
 .gallery-menu__subtitle {
   color: white;
@@ -1504,6 +1509,8 @@ transition: fill 0.2s ease-in;
   .gallery{
     min-height: 855px;
     padding-top: 50px;
+    padding-bottom: 0;
+    max-height: 100%;
   }
   .gallery__title{
     font-size: 28px;
@@ -1537,11 +1544,13 @@ transition: fill 0.2s ease-in;
   .gallery-menu__subtitle-table{
     order: 2;
     text-align:left;
+
   }
   .gallery__swiper-container{
     max-width: 290px;
     margin: 0 auto;
     margin-bottom: 15px;
+    max-height: 371px;
   }
   .gallery__swiper-slide{
     max-height: 375px;
@@ -1551,6 +1560,7 @@ transition: fill 0.2s ease-in;
   }
   .gallery__right-section{
   padding-top: 0px;
+  padding-bottom: 20px;
   }
   .gallery__btn-prev{
   margin-right: 10px;
@@ -2010,7 +2020,7 @@ transition: opacity, 0.2s  ease-in;
   }
   .tab__content{
     order: -1;
-    margin-bottom: 46px;
+    margin-bottom: 51px;
   }
 
 .accordion__list{
@@ -2062,9 +2072,6 @@ line-height: 38px;
   .catalog-painter__title{
     line-height: 50px;
   }
-  .catalog-painter__subtitle{
-    padding-right: 5px;
-  }
   .ui-accordion .ui-accordion-content{
     max-height: 806px;
     padding-top: 20px;
@@ -2075,11 +2082,11 @@ line-height: 38px;
     text-align: left;
     margin-right: 0;
   }
+  .catalog-painter__subtitle{
+    max-width: 289px;
+  }
+}
 
-}
-@media (max-width: 350px){
-  
-}
 
 
 
@@ -3223,7 +3230,35 @@ margin-bottom: 8px;
   display: flex;
   flex-direction: column;
   padding-left: 40px;
+  position: relative;
+}
 
+.contacts__modal{
+    background-color:rgba(0, 0, 0, 0.7);
+    width: 400px;
+    max-width: 100%;
+    min-height: 200px;
+    position: absolute;
+    z-index: 10;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    left: 500px;
+    top: 30%;
+    display: none;
+}
+.contacts__modal--active{
+    display: block;
+}
+.contacts__modal-container{
+    padding: 10px;
+}
+.contacts__modal-message{
+    font-size: 20px;
+    color: white;
+    
 }
 .adress-contacts{
 padding-top: 127px;

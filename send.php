@@ -1,35 +1,53 @@
-<?php
-/* Здесь проверяется существование переменных */
-if (isset($_POST['user_name'])) {$phone = $_POST['user_name'];}
-if (isset($_POST['user_phone'])) {$name = $_POST['user_phone'];}
- 
-/* Сюда впишите свою эл. почту */
-$myaddres  = "soba4kin81@mail.ru"; // кому отправляем
- 
-/* А здесь прописывается текст сообщения, \n - перенос строки */
-$mes = "Тема: Заказ обратного звонка!\nТелефон: $phone\nИмя: $name";
- 
-/* А эта функция как раз занимается отправкой письма на указанный вами email */
-$sub='Заказ'; //сабж
-$email='Заказ обратного звонка'; // от кого
-$send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
- 
-ini_set('short_open_tag', 'On');
-header('Refresh: 3; URL=index.html');
+<?
+require_once 'PHPMailer/PHPMailerAutoload.php';
+
+$admin_email = array();
+foreach ( $_POST["admin_email"] as $key => $value ) {
+	array_push($admin_email, $value);
+}
+
+// $admin_email = 'tasha.sk666@gmail.com';
+
+$form_subject = trim($_POST["form_subject"]);
+
+
+$mail = new PHPMailer;
+$mail->CharSet = 'UTF-8';
+
+$c = true;
+$message = '';
+foreach ( $_POST as $key => $value ) {
+	if ( $value != ""  && $key != "admin_email" && $key != "form_subject" ) {
+		if (is_array($value)) {
+			$val_text = '';
+			foreach ($value as $val) {
+				if ($val && $val != '') {
+					$val_text .= ($val_text==''?'':', ').$val;
+				}
+			}
+			$value = $val_text;
+		}
+		$message .= "
+		" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
+		<td style='padding: 10px; width: auto;'><b>$key:</b></td>
+		<td style='padding: 10px;width: 100%;'>$value</td>
+		</tr>
+		";
+	}
+}
+$message = "<table style='width: 50%;'>$message</table>";
+
+$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Blanchard');
+
+foreach ( $admin_email as $key => $value ) {
+	$mail->addAddress($value);
+}
+
+
+
+$mail->Subject = $form_subject;
+
+$body = $message;
+$mail->msgHTML($body);
+$mail->send();
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=index.html">
-<title>Спасибо! Мы свяжемся с вами!</title>
-<meta name="generator">
-<script type="text/javascript">
-setTimeout('location.replace("/index.html")', 3000);
-/*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
-</script> 
-</head>
-<body>
-<h1>Спасибо! Мы свяжемся с вами!</h1>
-</body>
-</html>

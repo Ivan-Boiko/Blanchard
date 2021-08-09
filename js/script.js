@@ -109,9 +109,9 @@ let galleryModals = () => {
             modalOverlay.classList.remove("modal-overlay--visible")
             modal.forEach((el) => {
                 el.classList.remove("modal--visible")
+                document.getElementsByTagName('body')[0].style.overflow = "auto"
             })
-        }
-        document.getElementsByTagName('body')[0].style.overflow = "auto"
+        }    
     });
     btnClose.forEach((el) => {
         el.addEventListener('click', () => {
@@ -346,13 +346,21 @@ if (numInList > numToShow){
 
 
     // VALIDATION
+    let modalForm = function(){
+        let modal = document.querySelector('.contacts__modal');
+        let modalBtnActive = document.querySelector('.callback-contacts__btn')
+        modalBtnActive.addEventListener('click', function(){
+            modal.classList.add('contacts__modal--active');
+            setInterval(function(){
+                modal.classList.remove('contacts__modal--active')
+                location.reload();
+            }, 3000)
+        });   
+    } 
 
     var selector = document.querySelector('input[type="tel"]');
     var im = new Inputmask("+7 (999) 999-99-99");
-
     im.mask(selector);
-
-
     new JustValidate('.callback-contacts',{
     colorWrong: '#ff3300',
     rules: {
@@ -380,9 +388,20 @@ if (numInList > numToShow){
         function:"Введите больше цифр"
       }
     },
+    submitHandler: function(form){
+        let formData = new FormData(form);
+        let xhr = new XMLHttpRequest();
 
+        xhr.onreadystatechange = function (){
+            if (xhr.readyState == 4 && xhr.status == 200){    
+                modalForm()ж
+            }
+        }
+        xhr.open('POST', 'send.php' , true);
+        xhr.send(formData);
+        
+    }
   });
-
 
 
 // accordion
