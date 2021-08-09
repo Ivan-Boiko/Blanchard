@@ -394,7 +394,7 @@ if (numInList > numToShow){
 
         xhr.onreadystatechange = function (){
             if (xhr.readyState == 4 && xhr.status == 200){    
-                modalForm()ж
+                modalForm();
             }
         }
         xhr.open('POST', 'send.php' , true);
