@@ -3241,22 +3241,20 @@ margin-bottom: 8px;
     position: absolute;
     z-index: 10;
     border-radius: 10px;
-    display: flex;
-    text-align: center;
+    display: none;
     align-items: center;
-    justify-content: center;
     left: 500px;
     top: 30%;
-    display: none;
 }
 .contacts__modal--active{
-    display: block;
+    display: flex;
 }
 .contacts__modal-container{
+    margin: 0 auto;
     padding: 10px;
 }
 .contacts__modal-message{
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     
 }
