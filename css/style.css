@@ -1211,10 +1211,12 @@ transform: translate(-50%, -50%);
     width: 900px;
     max-width: 900px;
     min-height: 500px;
+
     background-color: #FFFFFF;
     color: #FFFFFF;
     display: flex;
     position: relative;
+    
 }
 
 .modal__picture{
@@ -1374,6 +1376,7 @@ transition: fill 0.2s ease-in;
     width: 96%;
     height: 93%;
   }
+ 
 }
 @media (max-width:1023px){
   .gallery{
@@ -1580,11 +1583,35 @@ transition: fill 0.2s ease-in;
     top: 2px;
     left: 2px;
   }
+  .modal__container{
+    min-height: 0;
+    max-height: 95vh;
+  }
+  .modal__date{
+    margin-bottom: 10px;
+}
   
 }
+@media screen and (orientation:landscape) and (max-width:1400px){
+    .modal__container{
+        min-height: 0;
+        max-height: 95vh;
+        
+      }
+      .modal__picture{
+          min-height: 0;
+          min-height: 120px;
+      }
+      .modal__date{
+          margin-bottom: 10px;
+      }
+}
 
-
-
+@media (min-height:1350px){
+    .modal-overlay{
+        align-items: flex-start;
+    }
+}
 
 
 /* KATALOG */
