@@ -351,7 +351,6 @@ if (numInList > numToShow){
             modal.classList.add('contacts__modal--active');
             setInterval(function(){
                 modal.classList.remove('contacts__modal--active')
-                location.reload();
             }, 3000)
     } 
 
